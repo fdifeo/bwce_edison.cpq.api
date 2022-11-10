@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/GetProductInput" xmlns:tns="http://www.example.org/GetProductInput" elementFormDefault="qualified">
+  <element name="Input">
+    
+    <complexType>
+      
+      <sequence>
+        
+        <element minOccurs="0" name="basket" type="string"/>
+        
+        <element minOccurs="0" name="contextKey" type="string"/>
+        
+        <element minOccurs="0" name="basketAction" type="string"/>
+        
+        <element minOccurs="0" name="lineItemKey" type="string"/>
+        
+        <element minOccurs="0" name="bundleContextKey" type="string"/>
+        
+        <element minOccurs="0" name="appliedAction" type="string"/>
+        
+        <element minOccurs="0" name="offer" type="string"/>
+        
+      </sequence>
+      
+    </complexType>
+    
+  </element>
+  
+</schema>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/CreateCartOutput" xmlns:tns="http://www.example.org/CreateCartOutput" elementFormDefault="qualified">
+ <element name="Output">     
+    <complexType>            
+      <sequence>               
+       	<element minOccurs="0" name="contextKey" type="string"/>   
+       	<element minOccurs="0" name="result">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="offerDetails">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="offer">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="unbounded" minOccurs="0" name="priceResult">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="chargeamount" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="baseamount" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="Amount__c" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="IsVirtualPrice__c" type="boolean"/>
+                              <element maxOccurs="1" minOccurs="0" name="IsBasePrice__c" type="boolean"/>
+                              <element maxOccurs="1" minOccurs="0" name="effectiveuntildatespec" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="effectivefromdatespec" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="SubType__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="Type__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="RecurringFrequency__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="ChargeType__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="DisplayText__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="pleEffectiveFrom" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="UnitPrice" type="double"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="addtocart">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="rest">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="params">
+                                      <complexType>
+                                        <sequence>
+                                          <element maxOccurs="1" minOccurs="0" name="context" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="basketAction" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="offer" type="string"/>
+                                        </sequence>
+                                      </complexType>
+                                    </element>
+                                    <element maxOccurs="1" minOccurs="0" name="link" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="method" type="string"/>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SpecificationType__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="ProductCode" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Product2Id" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="PricebookEntryId" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Quantity" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="minQuantity" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="maxQuantity" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="groupMinQuantity" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="groupMaxQuantity" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="productHierarchyPath" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="lineNumber" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Attachments" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="AttributeCategory">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="totalSize" type="integer"/>
+                              <element maxOccurs="unbounded" minOccurs="0" name="records">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="displaySequence" type="integer"/>
+                                    <element maxOccurs="1" minOccurs="0" name="Code__c" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="id" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="productAttributes">
+                                      <complexType>
+                                        <sequence>
+                                          <element maxOccurs="1" minOccurs="0" name="totalSize" type="integer"/>
+                                          <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                                          <element maxOccurs="unbounded" minOccurs="0" name="records">
+                                            <complexType>
+                                              <sequence>
+                                                <element maxOccurs="1" minOccurs="0" name="code" type="string"/>
+                                                <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                                                <element maxOccurs="1" minOccurs="0" name="inputType" type="string"/>
+                                                <element maxOccurs="1" minOccurs="0" name="cacheable" type="boolean"/>
+                                                <element maxOccurs="1" minOccurs="0" name="multiselect" type="boolean"/>
+                                                <element maxOccurs="1" minOccurs="0" name="required" type="boolean"/>
+                                                <element maxOccurs="1" minOccurs="0" name="readonly" type="boolean"/>
+                                                <element maxOccurs="1" minOccurs="0" name="disabled" type="boolean"/>
+                                                <element maxOccurs="1" minOccurs="0" name="filterable" type="boolean"/>
+                                                <element maxOccurs="1" minOccurs="0" name="attributeId" type="string"/>
+                                                <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                                                <element maxOccurs="1" minOccurs="0" name="displaySequence" type="integer"/>
+                                                <element maxOccurs="1" minOccurs="0" name="hasRules" type="boolean"/>
+                                                <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                                                <element maxOccurs="1" minOccurs="0" name="cloneable" type="boolean"/>
+                                                <element maxOccurs="1" minOccurs="0" name="isNotTranslatable" type="boolean"/>
+                                                <element maxOccurs="unbounded" minOccurs="0" name="values">
+                                                  <complexType>
+                                                    <sequence>
+                                                      <element maxOccurs="1" minOccurs="0" name="readonly" type="boolean"/>
+                                                      <element maxOccurs="1" minOccurs="0" name="disabled" type="boolean"/>
+                                                    </sequence>
+                                                  </complexType>
+                                                </element>
+                                                <element maxOccurs="1" minOccurs="0" name="userValues" type="string"/>
+                                              </sequence>
+                                            </complexType>
+                                          </element>
+                                        </sequence>
+                                      </complexType>
+                                    </element>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Description" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingStartDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingEndDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EndOfLifeDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsOrderable__c" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="IsActive" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="offerType" type="string"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      	<element minOccurs="0" name="errorCode" type="string"/>
+      	<element minOccurs="0" name="error" type="string"/>		
+      </sequence>          
+    </complexType>     
+  </element>
+</schema>

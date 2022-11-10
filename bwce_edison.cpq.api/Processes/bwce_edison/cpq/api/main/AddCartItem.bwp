@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpws:process exitOnStandardFault="no"
-    name="bwce_edison.cpq.api.Process" suppressJoinFailure="yes"
-    targetNamespace="http://xmlns.example.com/20221103162709"
+    name="bwce_edison.cpq.api.main.AddCartItem"
+    suppressJoinFailure="yes"
+    targetNamespace="http://xmlns.example.com/20221104145954"
     xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:info="http://www.tibco.com/bw/process/info"
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
@@ -172,7 +173,7 @@
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="false" createdBy="tibco"
-        createdOn="Thu Nov 03 16:27:09 CET 2022" description=""
+        createdOn="Fri Nov 04 14:59:54 CET 2022" description=""
         extraErrorVars="true" modifiers="public"
         productVersion="2.7.0 V55 2021-11-10" scalable="true"
         singleton="true" stateless="true" type="IT"/>

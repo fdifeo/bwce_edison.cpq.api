@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/GetProductOutput" xmlns:tns="http://www.example.org/GetProductOutput" elementFormDefault="qualified">
+  <element name="Output">
+     
+    <complexType>
+        
+      <sequence>
+           
+       <element minOccurs="0" name="cartContextKey" type="string"/>
+           
+        <element maxOccurs="1" minOccurs="0" name="createCartAction">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="rest">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="params">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="cartContextKey" type="string"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="link" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="method" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+           
+        <element minOccurs="0" name="sessionkey" type="string"/>
+           
+        <element minOccurs="0" name="errorCode" type="string"/>
+           
+        <element minOccurs="0" name="error" type="string"/>
+           
+        <element maxOccurs="1" minOccurs="0" name="result">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="totalSize" type="integer"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="records">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="displaySequence" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="UnitPrice">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="Product2">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="attributes">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="url" type="string"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingStartDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="IsActive" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EndOfLifeDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsConfigurable__c" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsOrderable__c" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Type__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="ProductCode" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SubType__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__LifecycleStatus__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingEndDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SpecificationType__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeDefaultValues__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeMetadata__c" type="string"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="Id">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="Product2Id" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="IsActive" type="boolean"/>
+                  <element maxOccurs="1" minOccurs="0" name="ProductCode" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringPrice__c" type="double"/>
+                  <element maxOccurs="1" minOccurs="0" name="Pricebook2Id" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="PricebookEntry">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="attributes">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="url" type="string"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Pricebook2Id" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Product2Id" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Product2">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="attributes">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="url" type="string"/>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                              <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="ProductCode" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeDefaultValues__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeMetadata__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsConfigurable__c" type="boolean"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Type__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__JSONAttribute__c" type="string"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="productId" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="defaultQuantity" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="minQuantity" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="maxQuantity" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="groupMinQuantity" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="groupMaxQuantity" type="integer"/>
+                  <element maxOccurs="1" minOccurs="0" name="sequenceNumber" type="double"/>
+                  <element maxOccurs="1" minOccurs="0" name="productChildItemId" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="productChildItemDefinition">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="attributes">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="url" type="string"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MinQuantity__c" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ChildLineNumber__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MinimumChildItemQuantity__c" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CollapseHierarchy__c" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ParentProductId__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsOverride__c" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SeqNumber__c" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsRootProductChildItem__c" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MaximumChildItemQuantity__c" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ParentProductId__r">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="attributes">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="url" type="string"/>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingStartDate__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EndOfLifeDate__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingEndDate__c" type="string"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MaxQuantity__c" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsVirtualItem__c" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Quantity__c" type="integer"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="productHierarchyPath" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="name" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="isVirtualItem" type="boolean"/>
+                  <element maxOccurs="1" minOccurs="0" name="SpecificationType" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="lineNumber" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="hasChildren" type="boolean"/>
+                  <element maxOccurs="1" minOccurs="0" name="orderActive" type="boolean"/>
+                  <element maxOccurs="1" minOccurs="0" name="itemType" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="action" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="SellingPeriod" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="ListPrice">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="OrderId">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="PricebookEntryId">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="Quantity">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Action__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AssetReferenceId__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CurrencyPaymentMode__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveOneTimeTotal__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveRecurringTotal__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsChangesAllowed__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__LineNumber__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCalculatedPrice__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCharge__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeManualDiscount__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeTotal__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Product2Id__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProductGroupKey__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProductHierarchyGroupKeyPath__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProductHierarchyPath__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProvisioningStatus__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCalculatedPrice__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCharge__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringManualDiscount__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringTotal__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RootItemId__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SubAction__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__InCartQuantityMap__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ParentItemId__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringDiscountPrice__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CpqMessageData__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ServiceAccountId__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__BillingAccountId__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ItemName__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CpqCardinalityMessage__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CpqPricingMessage__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CatalogItemReferenceDateTime__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OrderGroupId__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SupplementalAction__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SupersededOrderItemId__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__FirstVersionOrderItemId__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__FulfilmentStatus__c">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="value" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="previousValue" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="originalValue" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="fieldName" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="editable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="alternateValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="actions">
+                          <complexType>
+                            <sequence/>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="pricingLogValue">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="LogData">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="unbounded" minOccurs="0" name="OT_STD_PRC">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="PriceListEntryId" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="LogType" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="PricingElementGlobalKey" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="StartValue" type="double"/>
+                                    <element maxOccurs="1" minOccurs="0" name="SubType" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="Frequency" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="ChargeTiming" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="EndValue" type="double"/>
+                                    <element maxOccurs="1" minOccurs="0" name="DisplayText" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="PricingVariableCode" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="PricingElementId" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="PromotionId" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="OfferId" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="PriceListId" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="BaseAdjustment" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="BaseValue" type="double"/>
+                                    <element maxOccurs="1" minOccurs="0" name="AdjustmentMethod" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="AdjustmentValue" type="double"/>
+                                    <element maxOccurs="1" minOccurs="0" name="Amount" type="double"/>
+                                    <element maxOccurs="1" minOccurs="0" name="CurrencyType" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="CurrencyCode" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="LoyaltyCode" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="AdjustmentType" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="StartDate" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="EndDate" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="IsEffective" type="boolean"/>
+                                    <element maxOccurs="1" minOccurs="0" name="LogSequence" type="integer"/>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                              <element maxOccurs="unbounded" minOccurs="0" name="OT_STD_PRC_CALC">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="DisplayText" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="LogSequence" type="integer"/>
+                                    <element maxOccurs="1" minOccurs="0" name="ChargeTiming" type="string"/>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                              <element maxOccurs="unbounded" minOccurs="0" name="OT_STD_PRC_TOTAL">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="DisplayText" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="LogSequence" type="integer"/>
+                                    <element maxOccurs="1" minOccurs="0" name="ChargeTiming" type="string"/>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                              <element maxOccurs="unbounded" minOccurs="0" name="REC_MNTH_STD_PRC_CALC">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="DisplayText" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="LogSequence" type="integer"/>
+                                    <element maxOccurs="1" minOccurs="0" name="ChargeTiming" type="string"/>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                              <element maxOccurs="unbounded" minOccurs="0" name="REC_MNTH_STD_PRC_TOTAL">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="DisplayText" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="LogSequence" type="integer"/>
+                                    <element maxOccurs="1" minOccurs="0" name="ChargeTiming" type="string"/>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="PricingVariableCodeFieldBinding">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCharge__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCalculatedPrice__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeTotal__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveOneTimeTotal__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCharge__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCalculatedPrice__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringTotal__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveRecurringTotal__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="Quantity" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveQuantity__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeManualDiscount__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringManualDiscount__c" type="string"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="unbounded" minOccurs="0" name="PriceAdjustmentPromoKeys" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="PricingVariableCodeValues">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="OT_STD_PRC" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="OT_STD_PRC_CALC" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="OT_STD_PRC_TOTAL" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="EFF_OT_STD_PRC_TOTAL" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="REC_MNTH_STD_PRC" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="REC_MNTH_STD_PRC_CALC" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="REC_MNTH_STD_PRC_TOTAL" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="EFF_REC_MNTH_STD_PRC_TOTAL" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="LINE_QUANTITY" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="EFFECTIVE_QUANTITY" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="OT_STD_PRC_DISC_PCT_MAN" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="REC_MNTH_STD_PRC_DISC_PCT_MAN" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="ROLLUP_REC_MNTH_STD_PRC_TOTAL" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="ROLLUP_OT_STD_PRC_TOTAL" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="DISP_OT_STD_PRC" type="double"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="PricingVariableCodeBaseValues">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="OT_STD_PRC" type="double"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="LogVersion" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="PriceAsOfDateTime" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="LastPricingTime" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="SequentialOffers" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="SequentialPromotions" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="SequentialDiscounts" type="boolean"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="productCategories">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="totalSize" type="integer"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="attributeCategories">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="totalSize" type="integer"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                        <element maxOccurs="unbounded" minOccurs="0" name="records">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="displaySequence" type="integer"/>
+                              <element maxOccurs="1" minOccurs="0" name="Code__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="id" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="productAttributes">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="totalSize" type="integer"/>
+                                    <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                                    <element maxOccurs="unbounded" minOccurs="0" name="records">
+                                      <complexType>
+                                        <sequence>
+                                          <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="code" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="dataType" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="inputType" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="cacheable" type="boolean"/>
+                                          <element maxOccurs="1" minOccurs="0" name="multiselect" type="boolean"/>
+                                          <element maxOccurs="1" minOccurs="0" name="required" type="boolean"/>
+                                          <element maxOccurs="1" minOccurs="0" name="readonly" type="boolean"/>
+                                          <element maxOccurs="1" minOccurs="0" name="disabled" type="boolean"/>
+                                          <element maxOccurs="1" minOccurs="0" name="filterable" type="boolean"/>
+                                          <element maxOccurs="1" minOccurs="0" name="attributeId" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="label" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="displaySequence" type="integer"/>
+                                          <element maxOccurs="1" minOccurs="0" name="hasRules" type="boolean"/>
+                                          <element maxOccurs="1" minOccurs="0" name="hidden" type="boolean"/>
+                                          <element maxOccurs="1" minOccurs="0" name="cloneable" type="boolean"/>
+                                          <element maxOccurs="1" minOccurs="0" name="isNotTranslatable" type="boolean"/>
+                                          <element maxOccurs="unbounded" minOccurs="0" name="values">
+                                            <complexType>
+                                              <sequence>
+                                                <element maxOccurs="1" minOccurs="0" name="readonly" type="boolean"/>
+                                                <element maxOccurs="1" minOccurs="0" name="disabled" type="boolean"/>
+                                              </sequence>
+                                            </complexType>
+                                          </element>
+                                          <element maxOccurs="1" minOccurs="0" name="userValues" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="isNotAssetizable" type="boolean"/>
+                                        </sequence>
+                                      </complexType>
+                                    </element>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element maxOccurs="1" minOccurs="0" name="bundleContextKey" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="lineItemKey" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="actions">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="updateBasketAction">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="rest">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="method" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="link" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="params">
+                                      <complexType>
+                                        <sequence>
+                                          <element maxOccurs="1" minOccurs="0" name="bundleContextKey" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="lineItemKey" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="basketAction" type="string"/>
+                                        </sequence>
+                                      </complexType>
+                                    </element>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element maxOccurs="1" minOccurs="0" name="deleteFromBasketAction">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="rest">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="method" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="link" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="params">
+                                      <complexType>
+                                        <sequence>
+                                          <element maxOccurs="1" minOccurs="0" name="bundleContextKey" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="lineItemKey" type="string"/>
+                                          <element maxOccurs="1" minOccurs="0" name="basketAction" type="string"/>
+                                        </sequence>
+                                      </complexType>
+                                    </element>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="totals">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="EffectiveRecurringTotal__c" type="double"/>
+                  <element maxOccurs="1" minOccurs="0" name="EffectiveOneTimeTotal__c" type="double"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+          
+      </sequence>
+       
+    </complexType>
+    
+  </element>
+</schema>

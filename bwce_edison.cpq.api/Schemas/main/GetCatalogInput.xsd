@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/GetCatalogInput" xmlns:tns="http://www.example.org/GetCatalogInput" elementFormDefault="qualified">
+  <element name="Input">
+    
+  	<complexType>
+      
+      <sequence>
+        
+        <element minOccurs="0" name="context" type="tns:context_Type"/>
+        
+        <element minOccurs="0" name="isloggedin" type="boolean"/>
+        
+        <element minOccurs="0" name="Offer" type="string"/>
+        
+        <element minOccurs="0" name="basketAction" type="string"/>
+        
+        <element minOccurs="0" name="lineItemKey" type="string"/>
+        
+        <element minOccurs="0" name="bundleContextKey" type="string"/>
+        
+      </sequence>
+      
+    </complexType>
+    
+  </element>
+  
+  <complexType name="context_Type">
+    
+    <sequence>
+      
+      <element minOccurs="0" name="contextKey" type="string"/>
+      
+      <element minOccurs="0" name="contextValue" type="string"/>
+      
+    </sequence>
+    
+  </complexType>
+  
+</schema>

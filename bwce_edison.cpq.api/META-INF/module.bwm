@@ -7,7 +7,28 @@
   <sca:property xmi:id="__A-pYFuLEe2bEe9rguPydQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="__BFXEFuLEe2bEe9rguPydQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="__BKPkFuLEe2bEe9rguPydQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:component xmi:id="_-5BAMFuLEe2bEe9rguPydQ" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_-5BAMVuLEe2bEe9rguPydQ" processName="bwce_edison.cpq.api.Process"/>
+  <sca:component xmi:id="__lezoFxGEe2UgPjM58UbUA" name="ComponentCreateCart" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="__lezoVxGEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.CreateCart"/>
+  </sca:component>
+  <sca:component xmi:id="_9a12IFxIEe2UgPjM58UbUA" name="ComponentAddCartItem" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_9a12IVxIEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.AddCartItem"/>
+  </sca:component>
+  <sca:component xmi:id="_KgjvMFxJEe2UgPjM58UbUA" name="ComponentAddPromotion" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_KgjvMVxJEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.AddPromotion"/>
+  </sca:component>
+  <sca:component xmi:id="_i7oW8FxJEe2UgPjM58UbUA" name="ComponentGetProduct" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_i7oW8VxJEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.GetProduct"/>
+  </sca:component>
+  <sca:component xmi:id="_r8VicFxJEe2UgPjM58UbUA" name="ComponentGetCatalog" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_r8VicVxJEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.GetCatalog"/>
+  </sca:component>
+  <sca:component xmi:id="_1kFf0FxJEe2UgPjM58UbUA" name="ComponentGetCartItem" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1kFf0VxJEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.GetCartItem"/>
+  </sca:component>
+  <sca:component xmi:id="_94oI4FxJEe2UgPjM58UbUA" name="ComponentDeleteCartItem" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_94oI4VxJEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.DeleteCartItem"/>
+  </sca:component>
+  <sca:component xmi:id="_HjP0EFxKEe2UgPjM58UbUA" name="ComponentDeletePromotion" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_HjP0EVxKEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.DeletePromotion"/>
   </sca:component>
 </sca:composite>
