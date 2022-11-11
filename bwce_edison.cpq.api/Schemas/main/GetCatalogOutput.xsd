@@ -42,8 +42,8 @@
             <element maxOccurs="1" minOccurs="0" name="totals">
               <complexType>
                 <sequence>
-                  <element maxOccurs="1" minOccurs="0" name="EffectiveOneTimeTotal__c" type="double"/>
-                  <element maxOccurs="1" minOccurs="0" name="EffectiveRecurringTotal__c" type="double"/>
+                  <element maxOccurs="1" minOccurs="0" name="EffectiveOneTimeTotal" type="double"/>
+                  <element maxOccurs="1" minOccurs="0" name="EffectiveRecurringTotal" type="double"/>
                 </sequence>
               </complexType>
             </element>
@@ -153,7 +153,7 @@
                               </element>
                               <element maxOccurs="1" minOccurs="0" name="id" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="Code__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="Code" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="displaySequence" type="integer"/>
                               <element maxOccurs="unbounded" minOccurs="0" name="messages" type="string"/>
                             </sequence>
@@ -213,18 +213,18 @@
                         <element maxOccurs="1" minOccurs="0" name="PricingVariableCodeFieldBinding">
                           <complexType>
                             <sequence>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringManualDiscount__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeManualDiscount__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveQuantity__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringManualDiscount" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeManualDiscount" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveQuantity" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="Quantity" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveRecurringTotal__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringTotal__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCalculatedPrice__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCharge__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveOneTimeTotal__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeTotal__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCalculatedPrice__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCharge__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveRecurringTotal" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringTotal" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCalculatedPrice" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCharge" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveOneTimeTotal" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeTotal" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCalculatedPrice" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCharge" type="string"/>
                             </sequence>
                           </complexType>
                         </element>
@@ -306,7 +306,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__FulfilmentStatus__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__FulfilmentStatus">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -327,7 +327,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__FirstVersionOrderItemId__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__FirstVersionOrderItemId">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -348,7 +348,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SupersededOrderItemId__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SupersededOrderItemId">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -369,7 +369,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SupplementalAction__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SupplementalAction">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -390,7 +390,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OrderGroupId__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OrderGroupId">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -411,7 +411,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CatalogItemReferenceDateTime__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CatalogItemReferenceDateTime">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -432,7 +432,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CpqPricingMessage__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CpqPricingMessage">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -453,7 +453,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CpqCardinalityMessage__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CpqCardinalityMessage">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -474,7 +474,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ItemName__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ItemName">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -495,7 +495,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__BillingAccountId__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__BillingAccountId">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -516,7 +516,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ServiceAccountId__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ServiceAccountId">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -537,7 +537,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CpqMessageData__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CpqMessageData">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -558,7 +558,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringDiscountPrice__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringDiscountPrice">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -579,7 +579,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ParentItemId__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ParentItemId">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -600,7 +600,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__InCartQuantityMap__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__InCartQuantityMap">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -621,7 +621,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SubAction__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SubAction">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -642,7 +642,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RootItemId__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RootItemId">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -663,7 +663,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringTotal__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringTotal">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -684,7 +684,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringManualDiscount__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringManualDiscount">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -705,7 +705,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCharge__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCharge">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -726,7 +726,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCalculatedPrice__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringCalculatedPrice">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -747,7 +747,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProvisioningStatus__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProvisioningStatus">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -768,7 +768,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProductHierarchyPath__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProductHierarchyPath">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -789,7 +789,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProductHierarchyGroupKeyPath__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProductHierarchyGroupKeyPath">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -810,7 +810,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProductGroupKey__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ProductGroupKey">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -831,7 +831,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Product2Id__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Product2Id">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -852,7 +852,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeTotal__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeTotal">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -873,7 +873,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeManualDiscount__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeManualDiscount">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -894,7 +894,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCharge__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCharge">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -915,7 +915,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCalculatedPrice__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__OneTimeCalculatedPrice">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -936,7 +936,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__LineNumber__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__LineNumber">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -957,7 +957,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsChangesAllowed__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsChangesAllowed">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -978,7 +978,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveRecurringTotal__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveRecurringTotal">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -999,7 +999,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveOneTimeTotal__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EffectiveOneTimeTotal">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -1020,7 +1020,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CurrencyPaymentMode__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CurrencyPaymentMode">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -1041,7 +1041,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AssetReferenceId__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AssetReferenceId">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -1062,7 +1062,7 @@
                       </sequence>
                     </complexType>
                   </element>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Action__c">
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Action">
                     <complexType>
                       <sequence>
                         <element maxOccurs="1" minOccurs="0" name="actions">
@@ -1180,18 +1180,18 @@
                   <element maxOccurs="1" minOccurs="0" name="productChildItemDefinition">
                     <complexType>
                       <sequence>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Quantity__c" type="integer"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsVirtualItem__c" type="boolean"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MaxQuantity__c" type="integer"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ParentProductId__r">
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Quantity" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsVirtualItem" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MaxQuantity" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ParentProductId_r">
                           <complexType>
                             <sequence>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingEndDate__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EndOfLifeDate__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingEndDate" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EndOfLifeDate" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingStartDate__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingStartDate" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="attributes">
                                 <complexType>
                                   <sequence>
@@ -1203,17 +1203,17 @@
                             </sequence>
                           </complexType>
                         </element>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MaximumChildItemQuantity__c" type="integer"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsRootProductChildItem__c" type="boolean"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SeqNumber__c" type="double"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsOverride__c" type="boolean"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ParentProductId__c" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CollapseHierarchy__c" type="boolean"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MinimumChildItemQuantity__c" type="integer"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ChildLineNumber__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MaximumChildItemQuantity" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsRootProductChildItem" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SeqNumber" type="double"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsOverride" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ParentProductId" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__CollapseHierarchy" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MinimumChildItemQuantity" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__ChildLineNumber" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MinQuantity__c" type="integer"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__MinQuantity" type="integer"/>
                         <element maxOccurs="1" minOccurs="0" name="attributes">
                           <complexType>
                             <sequence>
@@ -1239,12 +1239,12 @@
                         <element maxOccurs="1" minOccurs="0" name="Product2">
                           <complexType>
                             <sequence>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__JSONAttribute__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Type__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsConfigurable__c" type="boolean"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeMetadata__c" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeDefaultValues__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__JSONAttribute" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Type" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsConfigurable" type="boolean"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeMetadata" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeDefaultValues" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="ProductCode" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
@@ -1274,7 +1274,7 @@
                     </complexType>
                   </element>
                   <element maxOccurs="1" minOccurs="0" name="Pricebook2Id" type="string"/>
-                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringPrice__c" type="double"/>
+                  <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__RecurringPrice" type="double"/>
                   <element maxOccurs="1" minOccurs="0" name="ProductCode" type="string"/>
                   <element maxOccurs="1" minOccurs="0" name="IsActive" type="boolean"/>
                   <element maxOccurs="1" minOccurs="0" name="Product2Id" type="string"/>
@@ -1303,22 +1303,22 @@
                   <element maxOccurs="1" minOccurs="0" name="Product2">
                     <complexType>
                       <sequence>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeMetadata__c" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeDefaultValues__c" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SpecificationType__c" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingEndDate__c" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__LifecycleStatus__c" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SubType__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeMetadata" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__AttributeDefaultValues" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SpecificationType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingEndDate" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__LifecycleStatus" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SubType" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="ProductCode" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Type__c" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsOrderable__c" type="boolean"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsConfigurable__c" type="boolean"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EndOfLifeDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__Type" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsOrderable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsConfigurable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EndOfLifeDate" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="IsActive" type="boolean"/>
                         <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey__c" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingStartDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingStartDate" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="attributes">
                           <complexType>
                             <sequence>
