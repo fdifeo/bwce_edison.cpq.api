@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/GetProductService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GetProductService" targetNamespace="http://www.tibco.com/GetProductService/" xmlns:xsd1="http://www.example.org/GetProductInput" xmlns:xsd2="http://www.example.org/GetProductOutput">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.tibco.com/GetProductService/">
+      <xsd:element name="getProduct">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProductResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    	<xsd:import namespace="http://www.example.org/GetProductInput"
+    		schemaLocation="../Schemas/main/GetProductInput.xsd">
+    	</xsd:import>
+    	<xsd:import namespace="http://www.example.org/GetProductOutput"
+    		schemaLocation="../Schemas/main/GetProductOutput.xsd">
+    	</xsd:import></xsd:schema></wsdl:types>
+  <wsdl:message name="getProductRequest">
+    <wsdl:part element="xsd1:Input" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getProductResponse">
+    <wsdl:part element="xsd2:Output" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="GetProductService">
+    <wsdl:operation name="getProduct">
+      <wsdl:input message="tns:getProductRequest"/>
+      <wsdl:output message="tns:getProductResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetProductServiceSOAP" type="tns:GetProductService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getProduct">
+      <soap:operation soapAction="http://www.tibco.com/GetProductService/getProduct"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetProductService">
+    <wsdl:port binding="tns:GetProductServiceSOAP" name="GetProductServiceSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/AddCartItemService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AddCartItemService" targetNamespace="http://www.tibco.com/AddCartItemService/" xmlns:xsd1="http://www.example.org/AddCartItemInput" xmlns:xsd2="http://www.example.org/AddCartItemOutput">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.tibco.com/AddCartItemService/">
+      <xsd:element name="addCartItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addCartItemResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    	<xsd:import namespace="http://www.example.org/AddCartItemInput"
+    		schemaLocation="../Schemas/main/AddCartItemInput.xsd">
+    	</xsd:import>
+    	<xsd:import namespace="http://www.example.org/AddCartItemOutput"
+    		schemaLocation="../Schemas/main/AddCartItemOutput.xsd">
+    	</xsd:import></xsd:schema></wsdl:types>
+  <wsdl:message name="addCartItemRequest">
+    <wsdl:part element="xsd1:Input" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="addCartItemResponse">
+    <wsdl:part element="xsd2:Output" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="AddCartItemService">
+    <wsdl:operation name="addCartItem">
+      <wsdl:input message="tns:addCartItemRequest"/>
+      <wsdl:output message="tns:addCartItemResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AddCartItemServiceSOAP" type="tns:AddCartItemService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addCartItem">
+      <soap:operation soapAction="http://www.tibco.com/AddCartItemService/addCartItem"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AddCartItemService">
+    <wsdl:port binding="tns:AddCartItemServiceSOAP" name="AddCartItemServiceSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

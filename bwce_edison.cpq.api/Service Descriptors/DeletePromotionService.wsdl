@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/DeletePromotionService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DeletePromotionService" targetNamespace="http://www.tibco.com/DeletePromotionService/" xmlns:xsd1="http://www.example.org/DeletePromotionInput" xmlns:xsd2="http://www.example.org/DeletePromotionOutput">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.tibco.com/DeletePromotionService/">
+      <xsd:element name="deletePromotion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deletePromotionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    	<xsd:import
+    		namespace="http://www.example.org/DeletePromotionInput"
+    		schemaLocation="../Schemas/main/DeletePromotionInput.xsd">
+    	</xsd:import>
+    	<xsd:import
+    		namespace="http://www.example.org/DeletePromotionOutput"
+    		schemaLocation="../Schemas/main/DeletePromotionOutput.xsd">
+    	</xsd:import></xsd:schema></wsdl:types>
+  <wsdl:message name="deletePromotionRequest">
+    <wsdl:part element="xsd1:Input" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="deletePromotionResponse">
+    <wsdl:part element="xsd2:Output" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="DeletePromotionService">
+    <wsdl:operation name="deletePromotion">
+      <wsdl:input message="tns:deletePromotionRequest"/>
+      <wsdl:output message="tns:deletePromotionResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DeletePromotionServiceSOAP" type="tns:DeletePromotionService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="deletePromotion">
+      <soap:operation soapAction="http://www.tibco.com/DeletePromotionService/deletePromotion"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DeletePromotionService">
+    <wsdl:port binding="tns:DeletePromotionServiceSOAP" name="DeletePromotionServiceSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

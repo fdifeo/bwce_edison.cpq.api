@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/AddPromotionService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AddPromotionService" targetNamespace="http://www.tibco.com/AddPromotionService/" xmlns:xsd1="http://www.example.org/AddPromotionInput" xmlns:xsd2="http://www.example.org/AddPromotionOutput">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.tibco.com/AddPromotionService/">
+      <xsd:element name="addPromotion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addPromotionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    	<xsd:import namespace="http://www.example.org/AddPromotionInput"
+    		schemaLocation="../Schemas/main/AddPromotionInput.xsd">
+    	</xsd:import>
+    	<xsd:import
+    		namespace="http://www.example.org/AddPromotionOutput"
+    		schemaLocation="../Schemas/main/AddPromotionOutput.xsd">
+    	</xsd:import></xsd:schema></wsdl:types>
+  <wsdl:message name="addPromotionRequest">
+    <wsdl:part element="xsd1:Input" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="addPromotionResponse">
+    <wsdl:part element="xsd2:Output" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="AddPromotionService">
+    <wsdl:operation name="addPromotion">
+      <wsdl:input message="tns:addPromotionRequest"/>
+      <wsdl:output message="tns:addPromotionResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AddPromotionServiceSOAP" type="tns:AddPromotionService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addPromotion">
+      <soap:operation soapAction="http://www.tibco.com/AddPromotionService/addPromotion"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AddPromotionService">
+    <wsdl:port binding="tns:AddPromotionServiceSOAP" name="AddPromotionServiceSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/CreateCartOutput" xmlns:tns="http://www.example.org/CreateCartOutput" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/CreateCartOutputRest" xmlns:tns="http://www.example.org/CreateCartOutputRest" elementFormDefault="qualified">
  <element name="Output">     
     <complexType>            
       <sequence>               
-       	<element minOccurs="0" name="contextKey" type="string"/>   
+       <element minOccurs="0" name="contextKey" type="string"/>   
        	<element minOccurs="0" name="result">
         <complexType>
           <sequence>
@@ -18,16 +18,16 @@
                             <sequence>
                               <element maxOccurs="1" minOccurs="0" name="chargeamount" type="double"/>
                               <element maxOccurs="1" minOccurs="0" name="baseamount" type="double"/>
-                              <element maxOccurs="1" minOccurs="0" name="Amount" type="double"/>
-                              <element maxOccurs="1" minOccurs="0" name="IsVirtualPrice" type="boolean"/>
-                              <element maxOccurs="1" minOccurs="0" name="IsBasePrice" type="boolean"/>
+                              <element maxOccurs="1" minOccurs="0" name="Amount__c" type="double"/>
+                              <element maxOccurs="1" minOccurs="0" name="IsVirtualPrice__c" type="boolean"/>
+                              <element maxOccurs="1" minOccurs="0" name="IsBasePrice__c" type="boolean"/>
                               <element maxOccurs="1" minOccurs="0" name="effectiveuntildatespec" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="effectivefromdatespec" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="SubType" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="Type" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="RecurringFrequency" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="ChargeType" type="string"/>
-                              <element maxOccurs="1" minOccurs="0" name="DisplayText" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="SubType__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="Type__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="RecurringFrequency__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="ChargeType__c" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="DisplayText__c" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="pleEffectiveFrom" type="string"/>
                               <element maxOccurs="1" minOccurs="0" name="UnitPrice" type="double"/>
                             </sequence>
@@ -56,12 +56,12 @@
                             </sequence>
                           </complexType>
                         </element>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SpecificationType" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SpecificationType__c" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="ProductCode" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="Product2Id" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="PricebookEntryId" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__GlobalGroupKey__c" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="Quantity" type="integer"/>
                         <element maxOccurs="1" minOccurs="0" name="minQuantity" type="integer"/>
                         <element maxOccurs="1" minOccurs="0" name="maxQuantity" type="integer"/>
@@ -78,7 +78,7 @@
                                 <complexType>
                                   <sequence>
                                     <element maxOccurs="1" minOccurs="0" name="displaySequence" type="integer"/>
-                                    <element maxOccurs="1" minOccurs="0" name="Code" type="string"/>
+                                    <element maxOccurs="1" minOccurs="0" name="Code__c" type="string"/>
                                     <element maxOccurs="1" minOccurs="0" name="Name" type="string"/>
                                     <element maxOccurs="1" minOccurs="0" name="id" type="string"/>
                                     <element maxOccurs="1" minOccurs="0" name="productAttributes">
@@ -128,10 +128,10 @@
                         </element>
                         <element maxOccurs="1" minOccurs="0" name="Id" type="string"/>
                         <element maxOccurs="1" minOccurs="0" name="Description" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingStartDate" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingEndDate" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EndOfLifeDate" type="string"/>
-                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsOrderable" type="boolean"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingStartDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__SellingEndDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__EndOfLifeDate__c" type="string"/>
+                        <element maxOccurs="1" minOccurs="0" name="vlocity_cmt__IsOrderable__c" type="boolean"/>
                         <element maxOccurs="1" minOccurs="0" name="IsActive" type="boolean"/>
                         <element maxOccurs="1" minOccurs="0" name="offerType" type="string"/>
                       </sequence>

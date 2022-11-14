@@ -1,5 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_-zMFAFuLEe2bEe9rguPydQ" targetNamespace="http://tns.tibco.com/bw/composite/bwce_edison.cpq.api" name="bwce_edison.cpq.api" compositeext:version="1.0.0" compositeext:formatVersion="2">
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AddCartItemInput="http://www.example.org/AddCartItemInput" xmlns:AddCartItemOutput="http://www.example.org/AddCartItemOutput" xmlns:AddCartItemService="http://www.tibco.com/AddCartItemService/" xmlns:AddPromotionInput="http://www.example.org/AddPromotionInput" xmlns:AddPromotionOutput="http://www.example.org/AddPromotionOutput" xmlns:AddPromotionService="http://www.tibco.com/AddPromotionService/" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:CreateCartInput="http://www.example.org/CreateCartInput" xmlns:CreateCartOutput="http://www.example.org/CreateCartOutput" xmlns:CreateCartService="http://www.tibco.com/CreateCartService/" xmlns:DeleteCartItemInput="http://www.example.org/DeleteCartItemInput" xmlns:DeleteCartItemOutput="http://www.example.org/DeleteCartItemOutput" xmlns:DeleteCartItemService="http://www.tibco.com/DeleteCartItemService/" xmlns:DeletePromotionInput="http://www.example.org/DeletePromotionInput" xmlns:DeletePromotionOutput="http://www.example.org/DeletePromotionOutput" xmlns:DeletePromotionService="http://www.tibco.com/DeletePromotionService/" xmlns:GetCartItemInput="http://www.example.org/GetCartItemInput" xmlns:GetCartItemOutput="http://www.example.org/GetCartItemOutput" xmlns:GetCartItemService="http://www.tibco.com/GetCartItemService/" xmlns:GetCatalogInput="http://www.example.org/GetCatalogInput" xmlns:GetCatalogOutput="http://www.example.org/GetCatalogOutput" xmlns:GetCatalogService="http://www.tibco.com/GetCatalogService/" xmlns:GetProductInput="http://www.example.org/GetProductInput" xmlns:GetProductOutput="http://www.example.org/GetProductOutput" xmlns:GetProductService="http://www.tibco.com/GetProductService/" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_-zMFAFuLEe2bEe9rguPydQ" targetNamespace="http://tns.tibco.com/bw/composite/bwce_edison.cpq.api" name="bwce_edison.cpq.api" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_n4nZ0GHlEe2N7LEIZPLUJQ" name="AddCartItemService" promote="ComponentAddCartItem/AddCartItemService">
+    <sca:interface.wsdl xmi:id="_n4_0UGHlEe2N7LEIZPLUJQ" interface="http://www.tibco.com/AddCartItemService/#wsdl.interface(AddCartItemService)" scaext:wsdlLocation="../Service%20Descriptors/AddCartItemService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_pkshIGHlEe2N7LEIZPLUJQ" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/ccb46a28882146eba496b3004cf50409/SOAPServiceBinding" portTypeQName="AddCartItemService:AddCartItemService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/AddCartItemService.wsdl">
+      <bindingType xmi:id="_plDtgGHlEe2N7LEIZPLUJQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_xPrP0GHlEe2N7LEIZPLUJQ" endpointURI="/SOAPServiceBinding/addCartItemService/" httpConnector="internal.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_plH-8GHlEe2N7LEIZPLUJQ" operationName="addCartItem" action="addCartItem" actionNeeded="true">
+        <bindingType xmi:id="_plH-8WHlEe2N7LEIZPLUJQ"/>
+        <messageConfiguration xmi:id="_plH-8mHlEe2N7LEIZPLUJQ" messageQName="AddCartItemService:addCartItemRequest" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/AddCartItemService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_plH-82HlEe2N7LEIZPLUJQ" partName="parameters" partElementName="AddCartItemInput:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_plH-9GHlEe2N7LEIZPLUJQ" messageQName="AddCartItemService:addCartItemResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/AddCartItemService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_plH-9WHlEe2N7LEIZPLUJQ" partName="parameters" partElementName="AddCartItemOutput:Output"/>
+        </messageConfiguration>
+        <context xmi:id="_plJNEGHlEe2N7LEIZPLUJQ">
+          <inputMapping xmi:id="_plLCQGHlEe2N7LEIZPLUJQ"/>
+          <outputMapping xmi:id="_plLCQWHlEe2N7LEIZPLUJQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_plLpUGHlEe2N7LEIZPLUJQ" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:service xmi:id="_PVbtAGHnEe2N7LEIZPLUJQ" name="AddPromotionService" promote="ComponentAddPromotion/AddPromotionService">
+    <sca:interface.wsdl xmi:id="_PVeJQGHnEe2N7LEIZPLUJQ" interface="http://www.tibco.com/AddPromotionService/#wsdl.interface(AddPromotionService)" scaext:wsdlLocation="../Service%20Descriptors/AddPromotionService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_QiPeYGHnEe2N7LEIZPLUJQ" name="SOAPServiceBinding1" targetNamespace="http://www.tibco.com/027f5e3bb2464bf2870ce581aec42cbf/SOAPServiceBinding1" portTypeQName="AddPromotionService:AddPromotionService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/AddPromotionService.wsdl">
+      <bindingType xmi:id="_QiPeYWHnEe2N7LEIZPLUJQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_WX4cEGHnEe2N7LEIZPLUJQ" endpointURI="/SOAPServiceBinding1/addPromotionService/" httpConnector="internal.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_QiPeYmHnEe2N7LEIZPLUJQ" operationName="addPromotion" action="addPromotion" actionNeeded="true">
+        <bindingType xmi:id="_QiQFcGHnEe2N7LEIZPLUJQ"/>
+        <messageConfiguration xmi:id="_QiQFcWHnEe2N7LEIZPLUJQ" messageQName="AddPromotionService:addPromotionRequest" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/AddPromotionService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_QiQFcmHnEe2N7LEIZPLUJQ" partName="parameters" partElementName="AddPromotionInput:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_QiQFc2HnEe2N7LEIZPLUJQ" messageQName="AddPromotionService:addPromotionResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/AddPromotionService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_QiQFdGHnEe2N7LEIZPLUJQ" partName="parameters" partElementName="AddPromotionOutput:Output"/>
+        </messageConfiguration>
+        <context xmi:id="_QiQFdWHnEe2N7LEIZPLUJQ">
+          <inputMapping xmi:id="_QiQFdmHnEe2N7LEIZPLUJQ"/>
+          <outputMapping xmi:id="_QiQFd2HnEe2N7LEIZPLUJQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_QiQFeGHnEe2N7LEIZPLUJQ" bindingName="SOAPServiceBinding1"/>
+  </sca:service>
+  <sca:service xmi:id="_iU6OwGHnEe2N7LEIZPLUJQ" name="CreateCartService" promote="ComponentCreateCart/CreateCartService">
+    <sca:interface.wsdl xmi:id="_iU610GHnEe2N7LEIZPLUJQ" interface="http://www.tibco.com/CreateCartService/#wsdl.interface(CreateCartService)" scaext:wsdlLocation="../Service%20Descriptors/CreateCartService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_j4e6UGHnEe2N7LEIZPLUJQ" name="SOAPServiceBinding2" targetNamespace="http://www.tibco.com/ac7d24179e104e68a301e74a99822396/SOAPServiceBinding2" portTypeQName="CreateCartService:CreateCartService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/CreateCartService.wsdl">
+      <bindingType xmi:id="_j4e6UWHnEe2N7LEIZPLUJQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_luLQoGHnEe2N7LEIZPLUJQ" endpointURI="/SOAPServiceBinding2/createCartService/" httpConnector="internal.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_j4fhYGHnEe2N7LEIZPLUJQ" operationName="createCart" action="createCart" actionNeeded="true">
+        <bindingType xmi:id="_j4fhYWHnEe2N7LEIZPLUJQ"/>
+        <messageConfiguration xmi:id="_j4fhYmHnEe2N7LEIZPLUJQ" messageQName="CreateCartService:createCartRequest" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/CreateCartService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_j4fhY2HnEe2N7LEIZPLUJQ" partName="parameters" partElementName="CreateCartInput:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_j4fhZGHnEe2N7LEIZPLUJQ" messageQName="CreateCartService:createCartResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/CreateCartService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_j4fhZWHnEe2N7LEIZPLUJQ" partName="parameters" partElementName="CreateCartOutput:Output"/>
+        </messageConfiguration>
+        <context xmi:id="_j4fhZmHnEe2N7LEIZPLUJQ">
+          <inputMapping xmi:id="_j4fhZ2HnEe2N7LEIZPLUJQ"/>
+          <outputMapping xmi:id="_j4fhaGHnEe2N7LEIZPLUJQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_j4fhaWHnEe2N7LEIZPLUJQ" bindingName="SOAPServiceBinding2"/>
+  </sca:service>
+  <sca:service xmi:id="_utfVAmHnEe2N7LEIZPLUJQ" name="DeleteCartItemService" promote="ComponentDeleteCartItem/DeleteCartItemService">
+    <sca:interface.wsdl xmi:id="_utf8E2HnEe2N7LEIZPLUJQ" interface="http://www.tibco.com/DeleteCartItemService/#wsdl.interface(DeleteCartItemService)" scaext:wsdlLocation="../Service%20Descriptors/DeleteCartItemService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_vyWEQGHnEe2N7LEIZPLUJQ" name="SOAPServiceBinding3" targetNamespace="http://www.tibco.com/09b5c216bfde4ef2959c3efcb6e463bf/SOAPServiceBinding3" portTypeQName="DeleteCartItemService:DeleteCartItemService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/DeleteCartItemService.wsdl">
+      <bindingType xmi:id="_vyWEQWHnEe2N7LEIZPLUJQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_yppokGHnEe2N7LEIZPLUJQ" endpointURI="/SOAPServiceBinding3/deleteCartItemService/" httpConnector="internal.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_vyWEQmHnEe2N7LEIZPLUJQ" operationName="deleteCartItem" action="deleteCartItem" actionNeeded="true">
+        <bindingType xmi:id="_vyWEQ2HnEe2N7LEIZPLUJQ"/>
+        <messageConfiguration xmi:id="_vyWERGHnEe2N7LEIZPLUJQ" messageQName="DeleteCartItemService:deleteCartItemRequest" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/DeleteCartItemService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_vyWERWHnEe2N7LEIZPLUJQ" partName="parameters" partElementName="DeleteCartItemInput:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_vyWERmHnEe2N7LEIZPLUJQ" messageQName="DeleteCartItemService:deleteCartItemResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/DeleteCartItemService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_vyWER2HnEe2N7LEIZPLUJQ" partName="parameters" partElementName="DeleteCartItemOutput:Output"/>
+        </messageConfiguration>
+        <context xmi:id="_vyWrUGHnEe2N7LEIZPLUJQ">
+          <inputMapping xmi:id="_vyWrUWHnEe2N7LEIZPLUJQ"/>
+          <outputMapping xmi:id="_vyWrUmHnEe2N7LEIZPLUJQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_vyWrU2HnEe2N7LEIZPLUJQ" bindingName="SOAPServiceBinding3"/>
+  </sca:service>
+  <sca:service xmi:id="_8MqP4WHnEe2N7LEIZPLUJQ" name="DeletePromotionService" promote="ComponentDeletePromotion/DeletePromotionService">
+    <sca:interface.wsdl xmi:id="_8Mq28WHnEe2N7LEIZPLUJQ" interface="http://www.tibco.com/DeletePromotionService/#wsdl.interface(DeletePromotionService)" scaext:wsdlLocation="../Service%20Descriptors/DeletePromotionService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_-P9kYGHnEe2N7LEIZPLUJQ" name="SOAPServiceBinding4" targetNamespace="http://www.tibco.com/b4a04aafc53e499a880227cf5342fe8d/SOAPServiceBinding4" portTypeQName="DeletePromotionService:DeletePromotionService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/DeletePromotionService.wsdl">
+      <bindingType xmi:id="_-P9kYWHnEe2N7LEIZPLUJQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_Ae4TAGHoEe2N7LEIZPLUJQ" endpointURI="/SOAPServiceBinding4/deletePromotionService/" httpConnector="internal.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_-P9kYmHnEe2N7LEIZPLUJQ" operationName="deletePromotion" action="deletePromotion" actionNeeded="true">
+        <bindingType xmi:id="_-P9kY2HnEe2N7LEIZPLUJQ"/>
+        <messageConfiguration xmi:id="_-P9kZGHnEe2N7LEIZPLUJQ" messageQName="DeletePromotionService:deletePromotionRequest" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/DeletePromotionService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_-P9kZWHnEe2N7LEIZPLUJQ" partName="parameters" partElementName="DeletePromotionInput:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_-P9kZmHnEe2N7LEIZPLUJQ" messageQName="DeletePromotionService:deletePromotionResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/DeletePromotionService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_-P9kZ2HnEe2N7LEIZPLUJQ" partName="parameters" partElementName="DeletePromotionOutput:Output"/>
+        </messageConfiguration>
+        <context xmi:id="_-P9kaGHnEe2N7LEIZPLUJQ">
+          <inputMapping xmi:id="_-P9kaWHnEe2N7LEIZPLUJQ"/>
+          <outputMapping xmi:id="_-P9kamHnEe2N7LEIZPLUJQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_-P-LcGHnEe2N7LEIZPLUJQ" bindingName="SOAPServiceBinding4"/>
+  </sca:service>
+  <sca:service xmi:id="_L8hbAWHoEe2N7LEIZPLUJQ" name="GetCartItemService" promote="ComponentGetCartItem/GetCartItemService">
+    <sca:interface.wsdl xmi:id="_L8jQMGHoEe2N7LEIZPLUJQ" interface="http://www.tibco.com/GetCartItemService/#wsdl.interface(GetCartItemService)" scaext:wsdlLocation="../Service%20Descriptors/GetCartItemService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_NDb_wGHoEe2N7LEIZPLUJQ" name="SOAPServiceBinding5" targetNamespace="http://www.tibco.com/6a089683a7b449348b4a6b4bf4823457/SOAPServiceBinding5" portTypeQName="GetCartItemService:GetCartItemService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/GetCartItemService.wsdl">
+      <bindingType xmi:id="_NDcm0GHoEe2N7LEIZPLUJQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_OmEQIGHoEe2N7LEIZPLUJQ" endpointURI="/SOAPServiceBinding5/getCartItemService/" httpConnector="internal.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_NDcm0WHoEe2N7LEIZPLUJQ" operationName="getCartItem" action="getCartItem" actionNeeded="true">
+        <bindingType xmi:id="_NDcm0mHoEe2N7LEIZPLUJQ"/>
+        <messageConfiguration xmi:id="_NDcm02HoEe2N7LEIZPLUJQ" messageQName="GetCartItemService:getCartItemRequest" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/GetCartItemService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_NDcm1GHoEe2N7LEIZPLUJQ" partName="parameters" partElementName="GetCartItemInput:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_NDcm1WHoEe2N7LEIZPLUJQ" messageQName="GetCartItemService:getCartItemResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/GetCartItemService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_NDcm1mHoEe2N7LEIZPLUJQ" partName="parameters" partElementName="GetCartItemOutput:Output"/>
+        </messageConfiguration>
+        <context xmi:id="_NDcm12HoEe2N7LEIZPLUJQ">
+          <inputMapping xmi:id="_NDdN4GHoEe2N7LEIZPLUJQ"/>
+          <outputMapping xmi:id="_NDdN4WHoEe2N7LEIZPLUJQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_NDdN4mHoEe2N7LEIZPLUJQ" bindingName="SOAPServiceBinding5"/>
+  </sca:service>
+  <sca:service xmi:id="_afLzMGHoEe2N7LEIZPLUJQ" name="GetCatalogService" promote="ComponentGetCatalog/GetCatalogService">
+    <sca:interface.wsdl xmi:id="_afMaQGHoEe2N7LEIZPLUJQ" interface="http://www.tibco.com/GetCatalogService/#wsdl.interface(GetCatalogService)" scaext:wsdlLocation="../Service%20Descriptors/GetCatalogService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_bYv4cGHoEe2N7LEIZPLUJQ" name="SOAPServiceBinding6" targetNamespace="http://www.tibco.com/71051fe632ee49aca06224359d651c85/SOAPServiceBinding6" portTypeQName="GetCatalogService:GetCatalogService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/GetCatalogService.wsdl">
+      <bindingType xmi:id="_bYwfgGHoEe2N7LEIZPLUJQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_fY1pwGHoEe2N7LEIZPLUJQ" endpointURI="/SOAPServiceBinding6/getCatalogService/" httpConnector="internal.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_bYwfgWHoEe2N7LEIZPLUJQ" operationName="getCatalog" action="getCatalog" actionNeeded="true">
+        <bindingType xmi:id="_bYwfgmHoEe2N7LEIZPLUJQ"/>
+        <messageConfiguration xmi:id="_bYwfg2HoEe2N7LEIZPLUJQ" messageQName="GetCatalogService:getCatalogRequest" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/GetCatalogService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_bYwfhGHoEe2N7LEIZPLUJQ" partName="parameters" partElementName="GetCatalogInput:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_bYwfhWHoEe2N7LEIZPLUJQ" messageQName="GetCatalogService:getCatalogResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/GetCatalogService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_bYwfhmHoEe2N7LEIZPLUJQ" partName="parameters" partElementName="GetCatalogOutput:Output"/>
+        </messageConfiguration>
+        <context xmi:id="_bYwfh2HoEe2N7LEIZPLUJQ">
+          <inputMapping xmi:id="_bYwfiGHoEe2N7LEIZPLUJQ"/>
+          <outputMapping xmi:id="_bYxGkGHoEe2N7LEIZPLUJQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_bYxGkWHoEe2N7LEIZPLUJQ" bindingName="SOAPServiceBinding6"/>
+  </sca:service>
+  <sca:service xmi:id="_pVb1wWHoEe2N7LEIZPLUJQ" name="GetProductService" promote="ComponentGetProduct/GetProductService">
+    <sca:interface.wsdl xmi:id="_pVeSAGHoEe2N7LEIZPLUJQ" interface="http://www.tibco.com/GetProductService/#wsdl.interface(GetProductService)" scaext:wsdlLocation="../Service%20Descriptors/GetProductService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_qb8K0GHoEe2N7LEIZPLUJQ" name="SOAPServiceBinding7" targetNamespace="http://www.tibco.com/925e17eddede465390787d599c6e5cce/SOAPServiceBinding7" portTypeQName="GetProductService:GetProductService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/GetProductService.wsdl">
+      <bindingType xmi:id="_qb8K0WHoEe2N7LEIZPLUJQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_r3mQgGHoEe2N7LEIZPLUJQ" endpointURI="/SOAPServiceBinding7/getProductService/" httpConnector="internal.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_qb8K0mHoEe2N7LEIZPLUJQ" operationName="getProduct" action="getProduct" actionNeeded="true">
+        <bindingType xmi:id="_qb8K02HoEe2N7LEIZPLUJQ"/>
+        <messageConfiguration xmi:id="_qb8K1GHoEe2N7LEIZPLUJQ" messageQName="GetProductService:getProductRequest" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/GetProductService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_qb8K1WHoEe2N7LEIZPLUJQ" partName="parameters" partElementName="GetProductInput:Input"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_qb8K1mHoEe2N7LEIZPLUJQ" messageQName="GetProductService:getProductResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/bwce_edison.cpq.api/Service%20Descriptors/GetProductService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_qb8K12HoEe2N7LEIZPLUJQ" partName="parameters" partElementName="GetProductOutput:Output"/>
+        </messageConfiguration>
+        <context xmi:id="_qb8x4GHoEe2N7LEIZPLUJQ">
+          <inputMapping xmi:id="_qb8x4WHoEe2N7LEIZPLUJQ"/>
+          <outputMapping xmi:id="_qb8x4mHoEe2N7LEIZPLUJQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_qb8x42HoEe2N7LEIZPLUJQ" bindingName="SOAPServiceBinding7"/>
+  </sca:service>
   <sca:property xmi:id="__AlAwFuLEe2bEe9rguPydQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="__AuxwFuLEe2bEe9rguPydQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="__AzqQFuLEe2bEe9rguPydQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
@@ -9,26 +177,50 @@
   <sca:property xmi:id="__BKPkFuLEe2bEe9rguPydQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:component xmi:id="__lezoFxGEe2UgPjM58UbUA" name="ComponentCreateCart" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="__lezoVxGEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.CreateCart"/>
+    <sca:service xmi:id="_iU5nsGHnEe2N7LEIZPLUJQ" name="CreateCartService">
+      <sca:interface.wsdl xmi:id="_iU5nsWHnEe2N7LEIZPLUJQ" interface="http://www.tibco.com/CreateCartService/#wsdl.interface(CreateCartService)" scaext:wsdlLocation="../Service%20Descriptors/CreateCartService.wsdl"/>
+    </sca:service>
   </sca:component>
   <sca:component xmi:id="_9a12IFxIEe2UgPjM58UbUA" name="ComponentAddCartItem" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_9a12IVxIEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.AddCartItem"/>
+    <sca:service xmi:id="_n4do0GHlEe2N7LEIZPLUJQ" name="AddCartItemService">
+      <sca:interface.wsdl xmi:id="_n4feAGHlEe2N7LEIZPLUJQ" interface="http://www.tibco.com/AddCartItemService/#wsdl.interface(AddCartItemService)" scaext:wsdlLocation="../Service%20Descriptors/AddCartItemService.wsdl"/>
+    </sca:service>
   </sca:component>
   <sca:component xmi:id="_KgjvMFxJEe2UgPjM58UbUA" name="ComponentAddPromotion" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_KgjvMVxJEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.AddPromotion"/>
+    <sca:service xmi:id="_PVae4GHnEe2N7LEIZPLUJQ" name="AddPromotionService">
+      <sca:interface.wsdl xmi:id="_PVbF8GHnEe2N7LEIZPLUJQ" interface="http://www.tibco.com/AddPromotionService/#wsdl.interface(AddPromotionService)" scaext:wsdlLocation="../Service%20Descriptors/AddPromotionService.wsdl"/>
+    </sca:service>
   </sca:component>
   <sca:component xmi:id="_i7oW8FxJEe2UgPjM58UbUA" name="ComponentGetProduct" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_i7oW8VxJEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.GetProduct"/>
+    <sca:service xmi:id="_pVbOsGHoEe2N7LEIZPLUJQ" name="GetProductService">
+      <sca:interface.wsdl xmi:id="_pVb1wGHoEe2N7LEIZPLUJQ" interface="http://www.tibco.com/GetProductService/#wsdl.interface(GetProductService)" scaext:wsdlLocation="../Service%20Descriptors/GetProductService.wsdl"/>
+    </sca:service>
   </sca:component>
   <sca:component xmi:id="_r8VicFxJEe2UgPjM58UbUA" name="ComponentGetCatalog" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_r8VicVxJEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.GetCatalog"/>
+    <sca:service xmi:id="_afLMIGHoEe2N7LEIZPLUJQ" name="GetCatalogService">
+      <sca:interface.wsdl xmi:id="_afLMIWHoEe2N7LEIZPLUJQ" interface="http://www.tibco.com/GetCatalogService/#wsdl.interface(GetCatalogService)" scaext:wsdlLocation="../Service%20Descriptors/GetCatalogService.wsdl"/>
+    </sca:service>
   </sca:component>
   <sca:component xmi:id="_1kFf0FxJEe2UgPjM58UbUA" name="ComponentGetCartItem" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1kFf0VxJEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.GetCartItem"/>
+    <sca:service xmi:id="_L8gz8GHoEe2N7LEIZPLUJQ" name="GetCartItemService">
+      <sca:interface.wsdl xmi:id="_L8hbAGHoEe2N7LEIZPLUJQ" interface="http://www.tibco.com/GetCartItemService/#wsdl.interface(GetCartItemService)" scaext:wsdlLocation="../Service%20Descriptors/GetCartItemService.wsdl"/>
+    </sca:service>
   </sca:component>
   <sca:component xmi:id="_94oI4FxJEe2UgPjM58UbUA" name="ComponentDeleteCartItem" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_94oI4VxJEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.DeleteCartItem"/>
+    <sca:service xmi:id="_utfVAGHnEe2N7LEIZPLUJQ" name="DeleteCartItemService">
+      <sca:interface.wsdl xmi:id="_utfVAWHnEe2N7LEIZPLUJQ" interface="http://www.tibco.com/DeleteCartItemService/#wsdl.interface(DeleteCartItemService)" scaext:wsdlLocation="../Service%20Descriptors/DeleteCartItemService.wsdl"/>
+    </sca:service>
   </sca:component>
   <sca:component xmi:id="_HjP0EFxKEe2UgPjM58UbUA" name="ComponentDeletePromotion" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_HjP0EVxKEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.DeletePromotion"/>
+    <sca:service xmi:id="_8Mpo0GHnEe2N7LEIZPLUJQ" name="DeletePromotionService">
+      <sca:interface.wsdl xmi:id="_8MqP4GHnEe2N7LEIZPLUJQ" interface="http://www.tibco.com/DeletePromotionService/#wsdl.interface(DeletePromotionService)" scaext:wsdlLocation="../Service%20Descriptors/DeletePromotionService.wsdl"/>
+    </sca:service>
   </sca:component>
 </sca:composite>
