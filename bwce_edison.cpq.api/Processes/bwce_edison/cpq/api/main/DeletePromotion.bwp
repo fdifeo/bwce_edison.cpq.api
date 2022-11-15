@@ -8,6 +8,10 @@
     xmlns:ns="http://www.tibco.com/pe/EngineTypes"
     xmlns:ns0="http://xmlns.example.com/20221104150812PLT"
     xmlns:ns1="http://www.tibco.com/DeletePromotionService/"
+    xmlns:ns2="http://www.example.org/DeletePromotionInput"
+    xmlns:ns3="http://www.example.org/DeletePromotionOutput"
+    xmlns:ns4="http://www.tibco.com/PSGLogActivities"
+    xmlns:ns5="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.ExceptionLog"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -172,6 +176,141 @@
                 </complexContent>
             </complexType>
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
+        </schema>
+        <schema elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/PSGLogActivities"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/PSGLogActivities">
+            <complexType name="keyValuePairType">
+                <sequence>
+                    <element minOccurs="0" name="key" type="string"/>
+                    <element minOccurs="0" name="value" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="LogInput">
+                <complexType>
+                    <sequence>
+                        <element minOccurs="0" name="loggerName" type="string"/>
+                        <element minOccurs="0" name="targetSystem" type="string"/>
+                        <element name="message" type="string"/>
+                        <element minOccurs="0" name="additionalLogParams">
+                            <complexType>
+                                <sequence>
+                                    <element maxOccurs="unbounded"
+                                    minOccurs="0"
+                                    name="keyValuePair" type="tns:keyValuePairType"/>
+                                </sequence>
+                            </complexType>
+                        </element>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="SetAndLogInput">
+                <complexType>
+                    <sequence>
+                        <element name="Header">
+                            <complexType>
+                                <sequence>
+                                    <element name="sessionId" type="string"/>
+                                    <element name="correlationId" type="string"/>
+                                    <element name="trackingId" type="string"/>
+                                    <element minOccurs="0" name="sender" type="string"/>
+                                    <element minOccurs="0" name="contextParams">
+                                    <complexType>
+                                    <sequence>
+                                    <element
+                                    maxOccurs="unbounded"
+                                    minOccurs="0"
+                                    name="keyValuePair" type="tns:keyValuePairType"/>
+                                    </sequence>
+                                    </complexType>
+                                    </element>
+                                    <element minOccurs="0"
+                                    name="serviceScope" type="string"/>
+                                </sequence>
+                            </complexType>
+                        </element>
+                        <element name="Input">
+                            <complexType>
+                                <sequence>
+                                    <element minOccurs="0"
+                                    name="loggerName" type="string"/>
+                                    <element minOccurs="0"
+                                    name="targetSystem" type="string"/>
+                                    <element name="message" type="string"/>
+                                    <element minOccurs="0" name="additionalLogParams">
+                                    <complexType>
+                                    <sequence>
+                                    <element
+                                    maxOccurs="unbounded"
+                                    minOccurs="0"
+                                    name="keyValuePair" type="tns:keyValuePairType"/>
+                                    </sequence>
+                                    </complexType>
+                                    </element>
+                                </sequence>
+                            </complexType>
+                        </element>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="ExceptionLogInput">
+                <complexType>
+                    <sequence>
+                        <element name="Input">
+                            <complexType>
+                                <sequence>
+                                    <element minOccurs="0"
+                                    name="loggerName" type="string"/>
+                                    <element name="errorCode" type="string"/>
+                                    <element name="errorMessage" type="string"/>
+                                    <element minOccurs="0"
+                                    name="processStack" type="string"/>
+                                    <element minOccurs="0"
+                                    name="stackTrace" type="string"/>
+                                    <element minOccurs="0" name="additionalLogParams">
+                                    <complexType>
+                                    <sequence>
+                                    <element
+                                    maxOccurs="unbounded"
+                                    minOccurs="0"
+                                    name="keyValuePair" type="tns:keyValuePairType"/>
+                                    </sequence>
+                                    </complexType>
+                                    </element>
+                                </sequence>
+                            </complexType>
+                        </element>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://schemas.tibco.com/bw/plugins/psglog/6.0/PSGLogPluginExceptions"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.tibco.com/bw/plugins/psglog/6.0/PSGLogPluginExceptions">
+            <complexType name="BaseExceptionType">
+                <sequence>
+                    <element name="msg" type="string"/>
+                    <element minOccurs="0" name="msgCode" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="PluginExceptionType">
+                <complexContent>
+                    <extension base="tns:BaseExceptionType"/>
+                </complexContent>
+            </complexType>
+            <element name="PSGLogPluginException" type="tns:PluginExceptionType"/>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.ExceptionLog"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/psglog/6.0/PSGLogPluginExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.ExceptionLog">
+            <import namespace="http://schemas.tibco.com/bw/plugins/psglog/6.0/PSGLogPluginExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:PSGLogPluginException"/>
+                </choice>
+            </complexType>
         </schema>
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20221104150812PLT"
@@ -375,6 +514,60 @@
                                     xsi:type="notation:Bounds" y="10"/>
                                     </children>
 
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint
+                                    x="23"
+                                    xsi:type="notation:Bounds" y="10"/>
+                                    </children>
+
                                     <styles xsi:type="notation:DrawerStyle"/>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -396,10 +589,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="108"
-                                    width="400"
-                                    x="2"
-                                    xsi:type="notation:Bounds" y="2"/>
+                                    height="99"
+                                    width="381" xsi:type="notation:Bounds"/>
                                     </children>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -418,10 +609,215 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
 
                                     <layoutConstraint
-                                    height="-45"
-                                    width="-76"
-                                    x="30"
-                                    xsi:type="notation:Bounds" y="20"/>
+                                    height="87"
+                                    width="384"
+                                    x="15" xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4022">
+
+                                    <children type="3022">
+
+                                    <children type="4029">
+
+                                    <children type="3031">
+
+                                    <children type="4033">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catchAll"/>
+
+                                    <layoutConstraint
+                                    height="34"
+                                    width="34"
+                                    xsi:type="notation:Bounds" y="68"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <children type="3032">
+
+                                    <children type="4005">
+
+                                    <children type="3007">
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint
+                                    x="225"
+                                    xsi:type="notation:Bounds" y="33"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint
+                                    x="9"
+                                    xsi:type="notation:Bounds" y="33"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:DrawerStyle"/>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
+
+                                    <layoutConstraint
+                                    height="146"
+                                    width="403" xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catchAll"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers"/>
+
+                                    <layoutConstraint
+                                    height="178"
+                                    width="364"
+                                    x="21"
+                                    xsi:type="notation:Bounds" y="122"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -433,7 +829,9 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
 
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    <layoutConstraint
+                                    height="301"
+                                    width="424" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -490,8 +888,9 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0"/>
                                     <layoutConstraint
-                                    height="140"
-                                    width="485" xsi:type="notation:Bounds"/>
+                                    height="320"
+                                    width="486"
+                                    x="2" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -502,9 +901,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    height="172" width="561"
-                                    x="20"
-                                    xsi:type="notation:Bounds" y="30"/>
+                                    height="350" width="561" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -518,9 +915,8 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="108"
-                                    width="400" x="2"
-                                    xsi:type="notation:Bounds" y="2"/>
+                                    <layoutConstraint height="384"
+                                    width="615" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -548,13 +944,45 @@
             </children>
             <styles fontName="Sans" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="860" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="460" width="960" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Sans" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[25, 0, -197, 0]$[198, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Sans" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catchAll/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[25, 0, -191, 0]$[192, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
+    <tibex:NamespaceRegistry enabled="true">
+        <tibex:namespaceItem
+            namespace="http://www.example.org/DeletePromotionInput" prefix="tns"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/DeletePromotionService/" prefix="tns1"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/PSGLogActivities" prefix="tns2"/>
+    </tibex:NamespaceRegistry>
     <bpws:import importType="http://schemas.xmlsoap.org/wsdl/"
         location="../../../../../Service%20Descriptors/DeletePromotionService.wsdl" namespace="http://www.tibco.com/DeletePromotionService/"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/DeletePromotionInput"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/DeletePromotionOutput"/>
     <bpws:partnerLinks>
         <bpws:partnerLink myRole="use" name="DeletePromotionService"
             partnerLinkType="ns0:partnerLinkType"
@@ -567,6 +995,18 @@
             name="deletePromotion" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns1:deletePromotionResponse"
             name="deletePromotionOut-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:Input"
+            name="DeletePromotionSub-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns3:Output" name="DeletePromotionSub" sca-bpel:internal="true"/>
+        <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
+        <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
+        <bpws:variable messageType="ns1:deletePromotionResponse"
+            name="ReplyError-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:ExceptionLogInput"
+            name="ExceptionLog-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:ActivityErrorData"
+            name="_error_ExceptionLog" sca-bpel:internal="true"/>
+        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -585,8 +1025,86 @@
                     portType="ns1:DeletePromotionService"
                     tibex:xpdlId="28318d53-320a-4a93-9e51-19101c45f2fd" variable="deletePromotion">
                     <bpws:scope name="scope1">
+                        <bpws:faultHandlers>
+                            <bpws:catchAll
+                                tibex:faultDetailsVar="FaultDetails"
+                                tibex:faultNameVar="FaultName" tibex:xpdlId="2b9bf2c0-7b38-4ace-a9e5-e2c88fc87a49">
+                                <bpws:scope name="scope2">
+                                    <bpws:flow name="flow2">
+                                    <bpws:links>
+                                    <bpws:link
+                                    name="ExceptionLogToReply" tibex:linkType="SUCCESS"/>
+                                    </bpws:links>
+                                    <bpws:reply name="ReplyError"
+                                    operation="deletePromotion"
+                                    partnerLink="DeletePromotionService"
+                                    portType="ns1:DeletePromotionService"
+                                    tibex:xpdlId="acee0a7c-c172-441f-9c31-4054715671e6" variable="ReplyError-input">
+                                    <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns1="http://www.tibco.com/DeletePromotionService/" xmlns:tns3="http://www.example.org/DeletePromotionOutput" version="2.0"&gt;
+    &lt;xsl:param name="FaultDetails"/&gt;
+    &lt;xsl:template name="Reply-input" match="/"&gt;
+        &lt;tns1:deletePromotionResponse&gt;
+            &lt;parameters&gt;
+                &lt;tns3:Output&gt;
+                    &lt;tns3:errorCode&gt;
+                        &lt;xsl:value-of select="$FaultDetails/MsgCode"/&gt;
+                    &lt;/tns3:errorCode&gt;
+                    &lt;tns3:error&gt;
+                        &lt;xsl:value-of select="$FaultDetails/Msg"/&gt;
+                    &lt;/tns3:error&gt;
+                &lt;/tns3:Output&gt;
+            &lt;/parameters&gt;
+        &lt;/tns1:deletePromotionResponse&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+                                    <tibex:inputBindings>
+                                    <tibex:partBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/DeletePromotionService/&quot; xmlns:tns3=&quot;http://www.example.org/DeletePromotionOutput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;FaultDetails&quot;/>&#xa;    &lt;xsl:template name=&quot;Reply-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:Output>&#xa;            &lt;tns3:errorCode>&#xa;                &lt;xsl:value-of select=&quot;$FaultDetails/MsgCode&quot;/>&#xa;            &lt;/tns3:errorCode>&#xa;            &lt;tns3:error>&#xa;                &lt;xsl:value-of select=&quot;$FaultDetails/Msg&quot;/>&#xa;            &lt;/tns3:error>&#xa;        &lt;/tns3:Output>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <bpws:targets>
+                                    <bpws:target linkName="ExceptionLogToReply"/>
+                                    </bpws:targets>
+                                    </bpws:reply>
+                                    <bpws:extensionActivity>
+                                    <tibex:activityExtension
+                                    inputVariable="ExceptionLog-input"
+                                    name="ExceptionLog"
+                                    tibex:xpdlId="c19a8908-d98f-4763-af16-fbe173fd07b7" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:sources>
+                                    <bpws:source linkName="ExceptionLogToReply"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/PSGLogActivities&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:template name=&quot;ExceptionLog-input&quot; match=&quot;/&quot;>&lt;tns2:ExceptionLogInput>&lt;tns2:Input>&lt;tns2:errorCode>&lt;xsl:value-of select=&quot;$FaultDetails/MsgCode&quot;/>&lt;/tns2:errorCode>&lt;tns2:errorMessage>&lt;xsl:value-of select=&quot;$FaultDetails/Msg&quot;/>&lt;/tns2:errorMessage>&lt;tns2:processStack>&lt;xsl:value-of select=&quot;$FaultDetails/ProcessStack&quot;/>&lt;/tns2:processStack>&lt;tns2:stackTrace>&lt;xsl:value-of select=&quot;$FaultDetails/StackTrace&quot;/>&lt;/tns2:stackTrace>&lt;/tns2:Input>&lt;/tns2:ExceptionLogInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:config>
+                                    <bwext:BWActivity
+                                    activityTypeID="bw.psglog.ExceptionLog"
+                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                                    xmlns:psglog="http://ns.tibco.com/bw/palette/psglog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <activityConfig>
+                                    <properties
+                                    name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/psglog#//ExceptionLog"/>
+                                    <value
+                                    Phase="ProcessEnd" xsi:type="psglog:ExceptionLog"/>
+                                    </properties>
+                                    </activityConfig>
+                                    </bwext:BWActivity>
+                                    </tibex:config>
+                                    </tibex:activityExtension>
+                                    </bpws:extensionActivity>
+                                    </bpws:flow>
+                                </bpws:scope>
+                            </bpws:catchAll>
+                        </bpws:faultHandlers>
                         <bpws:flow name="flow1">
-                            <bpws:links/>
+                            <bpws:links>
+                                <bpws:link
+                                    name="DeletePromotionSubTodeletePromotionOut" tibex:linkType="SUCCESS"/>
+                            </bpws:links>
                             <bpws:empty name="OnMessageStart"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="a4bc8f4f-99f6-4e9d-bb63-e765eed87878"/>
                             <bpws:empty name="OnMessageEnd"
@@ -598,9 +1116,66 @@
                                 tibex:xpdlId="2821988f-4078-4e14-91e3-fc518338fb85" variable="deletePromotionOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?> &lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/DeletePromotionService/&quot; version=&quot;2.0&quot;> &lt;xsl:template name=&quot;deletePromotionOut-input&quot; match=&quot;/&quot;> &lt;tns:deletePromotionResponse/> &lt;/xsl:template> &lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/DeletePromotionService/&quot; xmlns:tns3=&quot;http://www.example.org/DeletePromotionOutput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;DeletePromotionSub&quot;/>&#xa;    &lt;xsl:template name=&quot;deletePromotionOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:Output>&#xa;            &lt;xsl:if test=&quot;$DeletePromotionSub/tns3:cartContextKey&quot;>&#xa;                &lt;tns3:cartContextKey>&#xa;                    &lt;xsl:value-of select=&quot;$DeletePromotionSub/tns3:cartContextKey&quot;/>&#xa;                &lt;/tns3:cartContextKey>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:copy-of select=&quot;$DeletePromotionSub/tns3:createCartAction&quot;/>&#xa;            &lt;xsl:if test=&quot;$DeletePromotionSub/tns3:sessionKey&quot;>&#xa;                &lt;tns3:sessionKey>&#xa;                    &lt;xsl:value-of select=&quot;$DeletePromotionSub/tns3:sessionKey&quot;/>&#xa;                &lt;/tns3:sessionKey>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$DeletePromotionSub/tns3:errorCode&quot;>&#xa;                &lt;tns3:errorCode>&#xa;                    &lt;xsl:value-of select=&quot;$DeletePromotionSub/tns3:errorCode&quot;/>&#xa;                &lt;/tns3:errorCode>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$DeletePromotionSub/tns3:error&quot;>&#xa;                &lt;tns3:error>&#xa;                    &lt;xsl:value-of select=&quot;$DeletePromotionSub/tns3:error&quot;/>&#xa;                &lt;/tns3:error>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:copy-of select=&quot;$DeletePromotionSub/tns3:result&quot;/>&#xa;        &lt;/tns3:Output>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
+                                <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns1="http://www.tibco.com/DeletePromotionService/" xmlns:tns3="http://www.example.org/DeletePromotionOutput" version="2.0"&gt;
+    &lt;xsl:param name="DeletePromotionSub"/&gt;
+    &lt;xsl:template name="deletePromotionOut-input" match="/"&gt;
+        &lt;tns1:deletePromotionResponse&gt;
+            &lt;parameters&gt;
+                &lt;tns3:Output&gt;
+                    &lt;xsl:if test="$DeletePromotionSub/tns3:cartContextKey"&gt;
+                        &lt;tns3:cartContextKey&gt;
+                            &lt;xsl:value-of select="$DeletePromotionSub/tns3:cartContextKey"/&gt;
+                        &lt;/tns3:cartContextKey&gt;
+                    &lt;/xsl:if&gt;
+                    &lt;xsl:copy-of select="$DeletePromotionSub/tns3:createCartAction"/&gt;
+                    &lt;xsl:if test="$DeletePromotionSub/tns3:sessionKey"&gt;
+                        &lt;tns3:sessionKey&gt;
+                            &lt;xsl:value-of select="$DeletePromotionSub/tns3:sessionKey"/&gt;
+                        &lt;/tns3:sessionKey&gt;
+                    &lt;/xsl:if&gt;
+                    &lt;xsl:if test="$DeletePromotionSub/tns3:errorCode"&gt;
+                        &lt;tns3:errorCode&gt;
+                            &lt;xsl:value-of select="$DeletePromotionSub/tns3:errorCode"/&gt;
+                        &lt;/tns3:errorCode&gt;
+                    &lt;/xsl:if&gt;
+                    &lt;xsl:if test="$DeletePromotionSub/tns3:error"&gt;
+                        &lt;tns3:error&gt;
+                            &lt;xsl:value-of select="$DeletePromotionSub/tns3:error"/&gt;
+                        &lt;/tns3:error&gt;
+                    &lt;/xsl:if&gt;
+                    &lt;xsl:copy-of select="$DeletePromotionSub/tns3:result"/&gt;
+                &lt;/tns3:Output&gt;
+            &lt;/parameters&gt;
+        &lt;/tns1:deletePromotionResponse&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+                                <bpws:targets>
+                                    <bpws:target linkName="DeletePromotionSubTodeletePromotionOut"/>
+                                </bpws:targets>
                             </bpws:reply>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/DeletePromotionInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;deletePromotion&quot;/>&lt;xsl:template name=&quot;DeletePromotionSub-input&quot; match=&quot;/&quot;>&lt;tns:Input>&lt;xsl:copy-of select=&quot;$deletePromotion/parameters/tns:Input/tns:Offer&quot;/>&lt;xsl:if test=&quot;$deletePromotion/parameters/tns:Input/tns:basketAction&quot;>&lt;tns:basketAction>&lt;xsl:value-of select=&quot;$deletePromotion/parameters/tns:Input/tns:basketAction&quot;/>&lt;/tns:basketAction>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;$deletePromotion/parameters/tns:Input/tns:context&quot;/>&lt;/tns:Input>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
+                                    inputVariable="DeletePromotionSub-input"
+                                    name="DeletePromotionSub"
+                                    outputVariable="DeletePromotionSub"
+                                    tibex:xpdlId="f26c4861-eeac-4604-9d6b-b76076c29360"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:sources>
+                                    <bpws:source linkName="DeletePromotionSubTodeletePromotionOut"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/DeletePromotionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;deletePromotion.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;DeletePromotionSub-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:Input>&#xa;            &lt;xsl:copy-of select=&quot;$deletePromotion.parameters/tns:Offer&quot;/>&#xa;            &lt;xsl:if test=&quot;$deletePromotion.parameters/tns:basketAction&quot;>&#xa;                &lt;tns:basketAction>&#xa;                    &lt;xsl:value-of select=&quot;$deletePromotion.parameters/tns:basketAction&quot;/>&#xa;                &lt;/tns:basketAction>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:copy-of select=&quot;$deletePromotion.parameters/tns:context&quot;/>&#xa;        &lt;/tns:Input>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="bwce_edison.cpq.api.subs.DeletePromotionSub" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
+                            </bpws:extensionActivity>
                         </bpws:flow>
                     </bpws:scope>
                 </bpws:onMessage>
