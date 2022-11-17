@@ -175,6 +175,7 @@
   <sca:property xmi:id="__A-pYFuLEe2bEe9rguPydQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="__BFXEFuLEe2bEe9rguPydQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="__BKPkFuLEe2bEe9rguPydQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gcX_QGZaEe2hTuPKX5T_5g" name="salesforce.wsdl" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="__lezoFxGEe2UgPjM58UbUA" name="ComponentCreateCart" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="__lezoVxGEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.CreateCart"/>
     <sca:service xmi:id="_iU5nsGHnEe2N7LEIZPLUJQ" name="CreateCartService">
