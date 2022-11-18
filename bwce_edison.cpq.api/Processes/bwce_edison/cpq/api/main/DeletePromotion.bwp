@@ -12,6 +12,8 @@
     xmlns:ns3="http://www.example.org/DeletePromotionOutput"
     xmlns:ns4="http://www.tibco.com/PSGLogActivities"
     xmlns:ns5="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.ExceptionLog"
+    xmlns:ns6="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.SetAndLog"
+    xmlns:ns7="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.Log"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -312,6 +314,30 @@
                 </choice>
             </complexType>
         </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.SetAndLog"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/psglog/6.0/PSGLogPluginExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.SetAndLog">
+            <import namespace="http://schemas.tibco.com/bw/plugins/psglog/6.0/PSGLogPluginExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:PSGLogPluginException"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.Log"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/psglog/6.0/PSGLogPluginExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.psglog.Log">
+            <import namespace="http://schemas.tibco.com/bw/plugins/psglog/6.0/PSGLogPluginExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:PSGLogPluginException"/>
+                </choice>
+            </complexType>
+        </schema>
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20221104150812PLT"
             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
@@ -510,8 +536,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint
-                                    x="245"
-                                    xsi:type="notation:Bounds" y="10"/>
+                                    x="323"
+                                    xsi:type="notation:Bounds" y="20"/>
                                     </children>
 
                                     <children type="4002">
@@ -564,8 +590,116 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
 
                                     <layoutConstraint
-                                    x="23"
-                                    xsi:type="notation:Bounds" y="10"/>
+                                    x="157"
+                                    xsi:type="notation:Bounds" y="20"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint
+                                    x="4"
+                                    xsi:type="notation:Bounds" y="20"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Sans"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.5"/>
+
+                                    <layoutConstraint
+                                    x="481"
+                                    xsi:type="notation:Bounds" y="20"/>
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -589,8 +723,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="99"
-                                    width="381" xsi:type="notation:Bounds"/>
+                                    height="122"
+                                    width="635" xsi:type="notation:Bounds"/>
                                     </children>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -609,8 +743,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
 
                                     <layoutConstraint
-                                    height="87"
-                                    width="384"
+                                    height="122"
+                                    width="638"
                                     x="15" xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -697,7 +831,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
 
                                     <layoutConstraint
-                                    x="225"
+                                    x="267"
                                     xsi:type="notation:Bounds" y="33"/>
                                     </children>
 
@@ -751,7 +885,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
 
                                     <layoutConstraint
-                                    x="9"
+                                    x="97"
                                     xsi:type="notation:Bounds" y="33"/>
                                     </children>
 
@@ -777,7 +911,7 @@
 
                                     <layoutConstraint
                                     height="146"
-                                    width="403" xsi:type="notation:Bounds"/>
+                                    width="557" xsi:type="notation:Bounds"/>
                                     </children>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -831,7 +965,7 @@
 
                                     <layoutConstraint
                                     height="301"
-                                    width="424" xsi:type="notation:Bounds"/>
+                                    width="678" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -889,7 +1023,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0"/>
                                     <layoutConstraint
                                     height="320"
-                                    width="486"
+                                    width="740"
                                     x="2" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -901,7 +1035,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    height="350" width="561" xsi:type="notation:Bounds"/>
+                                    height="350" width="759" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -916,7 +1050,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="384"
-                                    width="615" xsi:type="notation:Bounds"/>
+                                    width="769" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -925,8 +1059,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="365" width="444"
-                                x="30" xsi:type="notation:Bounds" y="20"/>
+                            <layoutConstraint height="384" width="772" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -936,7 +1069,8 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="409" width="519" xsi:type="notation:Bounds"/>
+                    <layoutConstraint height="408" width="772" x="1"
+                        xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
@@ -944,7 +1078,7 @@
             </children>
             <styles fontName="Sans" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="460" width="960" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="460" width="1114" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -970,6 +1104,28 @@
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@faultHandlers/@catchAll/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[25, 0, -191, 0]$[192, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Sans" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.1"/>
+            <bendpoints points="[25, 4, -130, 0]$[131, 0, -24, -4]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Sans" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[25, -4, -134, 0]$[135, 0, -24, 4]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -978,6 +1134,8 @@
             namespace="http://www.tibco.com/DeletePromotionService/" prefix="tns1"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/PSGLogActivities" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://schemas.xmlsoap.org/wsdl/"
         location="../../../../../Service%20Descriptors/DeletePromotionService.wsdl" namespace="http://www.tibco.com/DeletePromotionService/"/>
@@ -1007,6 +1165,13 @@
         <bpws:variable element="ns5:ActivityErrorData"
             name="_error_ExceptionLog" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:SetAndLogInput"
+            name="SetAndLog-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:ActivityErrorData"
+            name="_error_SetAndLog" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogInput" name="LogProcessEnd-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:ActivityErrorData"
+            name="_error_LogProcessEnd" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1104,6 +1269,10 @@
                             <bpws:links>
                                 <bpws:link
                                     name="DeletePromotionSubTodeletePromotionOut" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="SetAndLogToDeletePromotionSub" tibex:linkType="SUCCESS"/>
+                                <bpws:link
+                                    name="deletePromotionOutToLog" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="a4bc8f4f-99f6-4e9d-bb63-e765eed87878"/>
@@ -1155,6 +1324,9 @@
                                 <bpws:targets>
                                     <bpws:target linkName="DeletePromotionSubTodeletePromotionOut"/>
                                 </bpws:targets>
+                                <bpws:sources>
+                                    <bpws:source linkName="deletePromotionOutToLog"/>
+                                </bpws:sources>
                             </bpws:reply>
                             <bpws:extensionActivity>
                                 <tibex:extActivity
@@ -1165,6 +1337,9 @@
                                     outputVariable="DeletePromotionSub"
                                     tibex:xpdlId="f26c4861-eeac-4604-9d6b-b76076c29360"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="SetAndLogToDeletePromotionSub"/>
+                                    </bpws:targets>
                                     <bpws:sources>
                                     <bpws:source linkName="DeletePromotionSubTodeletePromotionOut"/>
                                     </bpws:sources>
@@ -1175,6 +1350,68 @@
                                     <tibex:CallProcess
                                     subProcessName="bwce_edison.cpq.api.subs.DeletePromotionSub" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                                 </tibex:extActivity>
+                            </bpws:extensionActivity>
+                            <bpws:extensionActivity>
+                                <tibex:activityExtension
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/PSGLogActivities&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; xmlns:tns=&quot;http://www.example.org/DeletePromotionInput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;deletePromotion&quot;/>&lt;xsl:template name=&quot;SetAndLog-input&quot; match=&quot;/&quot;>&lt;tns2:SetAndLogInput>&lt;tns2:Header>&lt;tns2:sessionId>&lt;xsl:value-of select=&quot;tib:timestamp()&quot;/>&lt;/tns2:sessionId>&lt;tns2:correlationId>&lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&lt;/tns2:correlationId>&lt;tns2:trackingId>&lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&lt;/tns2:trackingId>&lt;tns2:sender>&lt;xsl:value-of select=&quot;'SAP'&quot;/>&lt;/tns2:sender>&lt;tns2:serviceScope>&lt;xsl:value-of select=&quot;'cpq.api.deletePromotion'&quot;/>&lt;/tns2:serviceScope>&lt;/tns2:Header>&lt;tns2:Input>&lt;tns2:targetSystem>&lt;xsl:value-of select=&quot;'SFDC'&quot;/>&lt;/tns2:targetSystem>&lt;tns2:message>&lt;xsl:value-of select=&quot;'Inizio gestione richiesta su layer main per operation deletePromotion'&quot;/>&lt;/tns2:message>&lt;tns2:additionalLogParams>&lt;tns2:keyValuePair>&lt;tns2:key>&lt;xsl:value-of select=&quot;'payload'&quot;/>&lt;/tns2:key>&lt;tns2:value>&lt;xsl:value-of select=&quot;tib:render-xml($deletePromotion/parameters/tns:Input, false(),false())&quot;/>&lt;/tns2:value>&lt;/tns2:keyValuePair>&lt;/tns2:additionalLogParams>&lt;/tns2:Input>&lt;/tns2:SetAndLogInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
+                                    inputVariable="SetAndLog-input"
+                                    name="SetAndLog"
+                                    tibex:xpdlId="2aea9410-c11f-440b-92d9-762aa9dccb4d" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:sources>
+                                    <bpws:source linkName="SetAndLogToDeletePromotionSub"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/PSGLogActivities&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; xmlns:tns=&quot;http://www.example.org/DeletePromotionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;deletePromotion.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;SetAndLog-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:SetAndLogInput>&#xa;            &lt;tns2:Header>&#xa;                &lt;tns2:sessionId>&#xa;                    &lt;xsl:value-of select=&quot;tib:timestamp()&quot;/>&#xa;                &lt;/tns2:sessionId>&#xa;                &lt;tns2:correlationId>&#xa;                    &lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&#xa;                &lt;/tns2:correlationId>&#xa;                &lt;tns2:trackingId>&#xa;                    &lt;xsl:value-of select=&quot;tib:uuid()&quot;/>&#xa;                &lt;/tns2:trackingId>&#xa;                &lt;tns2:sender>&#xa;                    &lt;xsl:value-of select=&quot;'SAP'&quot;/>&#xa;                &lt;/tns2:sender>&#xa;                &lt;tns2:serviceScope>&#xa;                    &lt;xsl:value-of select=&quot;'cpq.api.deletePromotion'&quot;/>&#xa;                &lt;/tns2:serviceScope>&#xa;            &lt;/tns2:Header>&#xa;            &lt;tns2:Input>&#xa;                &lt;tns2:targetSystem>&#xa;                    &lt;xsl:value-of select=&quot;'SFDC'&quot;/>&#xa;                &lt;/tns2:targetSystem>&#xa;                &lt;tns2:message>&#xa;                    &lt;xsl:value-of select=&quot;'Inizio gestione richiesta su layer main per operation deletePromotion'&quot;/>&#xa;                &lt;/tns2:message>&#xa;                &lt;tns2:additionalLogParams>&#xa;                    &lt;tns2:keyValuePair>&#xa;                        &lt;tns2:key>&#xa;                            &lt;xsl:value-of select=&quot;'payload'&quot;/>&#xa;                        &lt;/tns2:key>&#xa;                        &lt;tns2:value>&#xa;                            &lt;xsl:value-of select=&quot;tib:render-xml($deletePromotion.parameters, false(),false())&quot;/>&#xa;                        &lt;/tns2:value>&#xa;                    &lt;/tns2:keyValuePair>&#xa;                &lt;/tns2:additionalLogParams>&#xa;            &lt;/tns2:Input>&#xa;        &lt;/tns2:SetAndLogInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:config>
+                                    <bwext:BWActivity
+                                    activityTypeID="bw.psglog.SetAndLog"
+                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                                    xmlns:psglog="http://ns.tibco.com/bw/palette/psglog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <activityConfig>
+                                    <properties
+                                    name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/psglog#//SetAndLog"/>
+                                    <value Level="Info"
+                                    Phase="ProcessStart" xsi:type="psglog:SetAndLog"/>
+                                    </properties>
+                                    </activityConfig>
+                                    </bwext:BWActivity>
+                                    </tibex:config>
+                                </tibex:activityExtension>
+                            </bpws:extensionActivity>
+                            <bpws:extensionActivity>
+                                <tibex:activityExtension
+                                    inputVariable="LogProcessEnd-input"
+                                    name="LogProcessEnd"
+                                    tibex:xpdlId="9f77f6fb-7ed5-4df2-8723-7a07d5af3880" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="deletePromotionOutToLog"/>
+                                    </bpws:targets>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/PSGLogActivities&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;DeletePromotionSub&quot;/>&lt;xsl:template name=&quot;LogProcessEnd-input&quot; match=&quot;/&quot;>&lt;tns2:LogInput>&lt;tns2:targetSystem>&lt;xsl:value-of select=&quot;'SFDC'&quot;/>&lt;/tns2:targetSystem>&lt;tns2:message>&lt;xsl:value-of select=&quot;'Fine gestione richiesta su layer main per operation deletePromotion'&quot;/>&lt;/tns2:message>&lt;tns2:additionalLogParams>&lt;tns2:keyValuePair>&lt;tns2:key>&lt;xsl:value-of select=&quot;'payload'&quot;/>&lt;/tns2:key>&lt;tns2:value>&lt;xsl:value-of select=&quot;tib:render-xml($DeletePromotionSub, false(),false())&quot;/>&lt;/tns2:value>&lt;/tns2:keyValuePair>&lt;/tns2:additionalLogParams>&lt;/tns2:LogInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:config>
+                                    <bwext:BWActivity
+                                    activityTypeID="bw.psglog.Log"
+                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                                    xmlns:psglog="http://ns.tibco.com/bw/palette/psglog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <activityConfig>
+                                    <properties
+                                    name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/psglog#//Log"/>
+                                    <value Level="Info"
+                                    Phase="ProcessEnd" xsi:type="psglog:Log"/>
+                                    </properties>
+                                    </activityConfig>
+                                    </bwext:BWActivity>
+                                    </tibex:config>
+                                </tibex:activityExtension>
                             </bpws:extensionActivity>
                         </bpws:flow>
                     </bpws:scope>
