@@ -991,7 +991,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.3"/>
-                                    <layoutConstraint x="251"
+                                    <layoutConstraint x="261"
                                     xsi:type="notation:Bounds" y="114"/>
                                     </children>
                                     <children type="4002">
@@ -1357,6 +1357,10 @@
             namespace="activity.jsonParser.input+a02fe501-5c76-4da5-b281-407820d55ec3+ActivityInputType" prefix="tns3"/>
         <tibex:namespaceItem
             namespace="http://www.example.org/CreateCartOutput" prefix="tns4"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/PSGLogActivities" prefix="tns5"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/CreateCartInput"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/CreateCartOutput"/>
@@ -1370,9 +1374,10 @@
             sca-bpel:internal="true" tibex:parameter="in"/>
         <bpws:variable element="ns3:Output" name="End-input"
             sca-bpel:internal="true" tibex:parameter="out"/>
-        <bpws:variable element="ns4:LogInput" name="InvokeLogEnd-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogInput"
+            name="InvokeStartLogSFDC-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns5:ActivityErrorData"
-            name="_error_InvokeLogEnd" sca-bpel:internal="true"/>
+            name="_error_InvokeStartLogSFDC" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
         <bpws:variable name="salesforceConnProperty"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
@@ -1407,9 +1412,10 @@
         <bpws:variable element="ns14:Output" name="ParseJSON" sca-bpel:internal="true"/>
         <bpws:variable element="ns13:ActivityErrorData"
             name="_error_ParseJSON" sca-bpel:internal="true"/>
-        <bpws:variable element="ns4:LogInput" name="Log1-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:LogInput"
+            name="InvokeLogEndSFDC-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns5:ActivityErrorData"
-            name="_error_Log1" sca-bpel:internal="true"/>
+            name="_error_InvokeLogEndSFDC" sca-bpel:internal="true"/>
         <bpws:variable element="ns4:ExceptionLogInput"
             name="ExceptionLog-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns15:ActivityErrorData"
@@ -1442,7 +1448,7 @@
                                 </bpws:targets>
                                 <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.example.org/CreateCartOutput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:Output/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.example.org/CreateCartOutput&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns4:Output>&lt;tns4:errorCode>&lt;xsl:value-of select=&quot;$FaultDetails/MsgCode&quot;/>&lt;/tns4:errorCode>&lt;tns4:error>&lt;xsl:value-of select=&quot;$FaultDetails/Msg&quot;/>&lt;/tns4:error>&lt;/tns4:Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:config>
                                     <bwext:BWActivity
@@ -1470,7 +1476,7 @@
                                 </bpws:sources>
                                 <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?> &lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/PSGLogActivities&quot; version=&quot;2.0&quot;> &lt;xsl:template name=&quot;ExceptionLog-input&quot; match=&quot;/&quot;> &lt;tns:ExceptionLogInput/>&lt;/xsl:template> &lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.tibco.com/PSGLogActivities&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:template name=&quot;ExceptionLog-input&quot; match=&quot;/&quot;>&lt;tns5:ExceptionLogInput>&lt;tns5:Input>&lt;tns5:errorCode>&lt;xsl:value-of select=&quot;$FaultDetails/MsgCode&quot;/>&lt;/tns5:errorCode>&lt;tns5:errorMessage>&lt;xsl:value-of select=&quot;$FaultDetails/Msg&quot;/>&lt;/tns5:errorMessage>&lt;tns5:processStack>&lt;xsl:value-of select=&quot;$FaultDetails/ProcessStack&quot;/>&lt;/tns5:processStack>&lt;tns5:stackTrace>&lt;xsl:value-of select=&quot;$FaultDetails/StackTrace&quot;/>&lt;/tns5:stackTrace>&lt;/tns5:Input>&lt;/tns5:ExceptionLogInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:config>
                                     <bwext:BWActivity
@@ -1524,7 +1530,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.example.org/CreateCartOutput&quot; xmlns:tns=&quot;http://www.example.org/CreateCartOutputRest&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;tns4:Output>&lt;xsl:if test=&quot;$ParseJSON/tns:contextKey&quot;>&lt;tns4:contextKey>&lt;xsl:value-of select=&quot;$ParseJSON/tns:contextKey&quot;/>&lt;/tns4:contextKey>&lt;/xsl:if>&lt;tns4:result>&lt;xsl:for-each select=&quot;$ParseJSON/tns:result/tns:offerDetails&quot;>&lt;tns4:offerDetails>&lt;xsl:for-each select=&quot;tns:offer&quot;>&lt;tns4:offer/>&lt;/xsl:for-each>&lt;/tns4:offerDetails>&lt;/xsl:for-each>&lt;/tns4:result>&lt;xsl:if test=&quot;$ParseJSON/tns:errorCode&quot;>&lt;tns4:errorCode>&lt;xsl:value-of select=&quot;$ParseJSON/tns:errorCode&quot;/>&lt;/tns4:errorCode>&lt;/xsl:if>&lt;xsl:if test=&quot;$ParseJSON/tns:error&quot;>&lt;tns4:error>&lt;xsl:value-of select=&quot;$ParseJSON/tns:error&quot;/>&lt;/tns4:error>&lt;/xsl:if>&lt;/tns4:Output>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.example.org/CreateCartOutput&quot; xmlns:tns6=&quot;http://www.example.org/CreateCartOutputRest&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ParseJSON&quot;/>&#xa;    &lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:Output>&#xa;            &lt;xsl:if test=&quot;$ParseJSON/tns6:contextKey&quot;>&#xa;                &lt;tns4:contextKey>&#xa;                    &lt;xsl:value-of select=&quot;$ParseJSON/tns6:contextKey&quot;/>&#xa;                &lt;/tns4:contextKey>&#xa;            &lt;/xsl:if>&#xa;            &lt;tns4:result>&#xa;                &lt;xsl:for-each select=&quot;$ParseJSON/tns6:result/tns6:offerDetails&quot;>&#xa;                    &lt;tns4:offerDetails>&#xa;                        &lt;xsl:for-each select=&quot;tns6:offer&quot;>&#xa;                            &lt;tns4:offer/>&#xa;                        &lt;/xsl:for-each>&#xa;                    &lt;/tns4:offerDetails>&#xa;                &lt;/xsl:for-each>&#xa;            &lt;/tns4:result>&#xa;            &lt;xsl:if test=&quot;$ParseJSON/tns6:errorCode&quot;>&#xa;                &lt;tns4:errorCode>&#xa;                    &lt;xsl:value-of select=&quot;$ParseJSON/tns6:errorCode&quot;/>&#xa;                &lt;/tns4:errorCode>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$ParseJSON/tns6:error&quot;>&#xa;                &lt;tns4:error>&#xa;                    &lt;xsl:value-of select=&quot;$ParseJSON/tns6:error&quot;/>&#xa;                &lt;/tns4:error>&#xa;            &lt;/xsl:if>&#xa;        &lt;/tns4:Output>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1544,8 +1550,8 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension
-                    inputVariable="InvokeLogEnd-input"
-                    name="InvokeLogEnd"
+                    inputVariable="InvokeStartLogSFDC-input"
+                    name="InvokeStartLogSFDC"
                     tibex:xpdlId="9fd3c17e-0ff2-4ef9-84ba-c8e9aa37d8c0" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="StartToLog"/>
@@ -1555,7 +1561,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.tibco.com/PSGLogActivities&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns5:LogInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.tibco.com/PSGLogActivities&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;InvokeStartLogSFDC-input&quot; match=&quot;/&quot;>&lt;tns5:LogInput>&lt;tns5:targetSystem>&lt;xsl:value-of select=&quot;'SFDC'&quot;/>&lt;/tns5:targetSystem>&lt;tns5:message>&lt;xsl:value-of select=&quot;'Inizio gestione richiesta su layer sub per operation createCart'&quot;/>&lt;/tns5:message>&lt;tns5:additionalLogParams>&lt;tns5:keyValuePair>&lt;tns5:key>&lt;xsl:value-of select=&quot;'payload'&quot;/>&lt;/tns5:key>&lt;tns5:value>&lt;xsl:value-of select=&quot;tib:render-xml($Start, false(),false())&quot;/>&lt;/tns5:value>&lt;/tns5:keyValuePair>&lt;/tns5:additionalLogParams>&lt;/tns5:LogInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.psglog.Log"
@@ -1587,7 +1593,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;urn:partner.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns5:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;urn:partner.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns6:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1677,8 +1683,9 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="Log1-input"
-                    name="Log1"
+                <tibex:activityExtension
+                    inputVariable="InvokeLogEndSFDC-input"
+                    name="InvokeLogEndSFDC"
                     tibex:xpdlId="b9eebde6-68c3-4405-a49c-2fdda202a256" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="ParseJSONToLog1"/>
@@ -1688,7 +1695,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.tibco.com/PSGLogActivities&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;Log1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns5:LogInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.tibco.com/PSGLogActivities&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;InvokeLogEndSFDC-input&quot; match=&quot;/&quot;>&lt;tns5:LogInput>&lt;tns5:targetSystem>&lt;xsl:value-of select=&quot;'SFDC'&quot;/>&lt;/tns5:targetSystem>&lt;tns5:message>&lt;xsl:value-of select=&quot;'Fine gestione richiesta su layer sub per operation createCart'&quot;/>&lt;/tns5:message>&lt;tns5:additionalLogParams>&lt;tns5:keyValuePair>&lt;tns5:key>&lt;xsl:value-of select=&quot;'payload'&quot;/>&lt;/tns5:key>&lt;tns5:value>&lt;xsl:value-of select=&quot;tib:render-xml($ParseJSON, false(), false())&quot;/>&lt;/tns5:value>&lt;/tns5:keyValuePair>&lt;/tns5:additionalLogParams>&lt;/tns5:LogInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.psglog.Log"
@@ -1699,7 +1706,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/psglog#//Log"/>
                                     <value Level="Info"
-                                    Phase="ProcessStart" xsi:type="psglog:Log"/>
+                                    Phase="InvokeEnd" xsi:type="psglog:Log"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>

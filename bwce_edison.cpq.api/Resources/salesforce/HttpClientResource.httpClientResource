@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_FQY5oWZbEe2hTuPKX5T_5g" name="salesforce.HttpClientResource" type="http:HttpClientConfiguration">
-  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_FQhcgGZbEe2hTuPKX5T_5g" httpClientVersion="httpcomponents" retryCount="3" idleConnectionTimeout="3000" cmdExecutionIsolationStrategy="COUNT_BASED" cmdExecutionIsolationTimeout="10" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="50" cmdCircuitBreakerSleepWindow="100" cmdCircuitBreakerErrorThresholdPercentage="100" cmdMetricsRollingStatsTime="100" cmdMetricsRollingStatsNumBuckets="60000" cmdMetricsHealthSnapshotInterval="500" tpCoreSize="10" tpMaxQueueSize="60000" tpQueueSizeRejectionThreshold="6000" tpKeepAliveTime="1">
-    <tcpDetails xmi:id="_FQqmcGZbEe2hTuPKX5T_5g"/>
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_FQhcgGZbEe2hTuPKX5T_5g" httpClientVersion="httpcomponents" cmdExecutionIsolationStrategy="COUNT_BASED" cmdExecutionIsolationTimeout="10" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="50" cmdCircuitBreakerSleepWindow="100" cmdCircuitBreakerErrorThresholdPercentage="100" cmdMetricsRollingStatsTime="100" cmdMetricsRollingStatsNumBuckets="60000" cmdMetricsHealthSnapshotInterval="500" tpCoreSize="10" tpMaxQueueSize="60000" tpQueueSizeRejectionThreshold="6000" tpKeepAliveTime="1">
+    <substitutionBindings xmi:id="_T69_AGmNEe2Dc5RXWItqlQ" template="useSingleThreadConnectionManager" propName="/Resources/salesforce/HttpClientResource/DisableConnectionPooling"/>
+    <substitutionBindings xmi:id="_WbHAgGmNEe2Dc5RXWItqlQ" template="idleConnectionTimeout" propName="/Resources/salesforce/HttpClientResource/IdleConnectionTimeout"/>
+    <substitutionBindings xmi:id="_j5t6sGmNEe2Dc5RXWItqlQ" template="acceptRedirect" propName="/Resources/salesforce/HttpClientResource/AcceptRedirect"/>
+    <substitutionBindings xmi:id="_msUlMGmNEe2Dc5RXWItqlQ" template="useSingleCookieHeader" propName="/Resources/salesforce/HttpClientResource/UseSingleCookieHeader"/>
+    <substitutionBindings xmi:id="_qFcdIGmNEe2Dc5RXWItqlQ" template="logReqRespTime" propName="/Resources/salesforce/HttpClientResource/LogRequestResponseTime"/>
+    <substitutionBindings xmi:id="_v7lxIGmNEe2Dc5RXWItqlQ" template="maxTotalConnections" propName="/Resources/salesforce/HttpClientResource/MaximumTotalConnections"/>
+    <substitutionBindings xmi:id="_zVRCsGmNEe2Dc5RXWItqlQ" template="maxTotalConnectionsPerHost" propName="/Resources/salesforce/HttpClientResource/MaximumTotalConnectionsPerHostRoute"/>
+    <substitutionBindings xmi:id="_D6DqsGmOEe2Dc5RXWItqlQ" template="retryCount" propName="/Resources/salesforce/HttpClientResource/RetryCount"/>
+    <substitutionBindings xmi:id="_HLj3sGmOEe2Dc5RXWItqlQ" template="useNonPreemptiveAuth" propName="/Resources/salesforce/HttpClientResource/UseNonPreemptiveAuthentication"/>
+    <tcpDetails xmi:id="_FQqmcGZbEe2hTuPKX5T_5g">
+      <substitutionBindings xmi:id="_NE77UGmNEe2Dc5RXWItqlQ" template="host" propName="/Resources/salesforce/HttpClientResource/DefaultHost"/>
+      <substitutionBindings xmi:id="_PbC3EGmNEe2Dc5RXWItqlQ" template="port" propName="/Resources/salesforce/HttpClientResource/DefaultPort"/>
+      <substitutionBindings xmi:id="_Z31mEGmNEe2Dc5RXWItqlQ" template="staleCheck" propName="/Resources/salesforce/HttpClientResource/StaleCheck"/>
+      <substitutionBindings xmi:id="_gXjbgGmNEe2Dc5RXWItqlQ" template="soTimeout" propName="/Resources/salesforce/HttpClientResource/SocketTimeout"/>
+      <substitutionBindings xmi:id="_AjkQAGmOEe2Dc5RXWItqlQ" template="connectionTimeout" propName="/Resources/salesforce/HttpClientResource/ConnectionTimeout"/>
+    </tcpDetails>
   </jndi:configuration>
 </jndi:namedResource>

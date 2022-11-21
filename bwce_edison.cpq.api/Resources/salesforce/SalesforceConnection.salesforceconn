@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:salesforceconnection="http://ns.tibco.com/bw/palette/salesforceconnection" xmi:id="_rlKRkWZaEe2hTuPKX5T_5g" name="salesforce.SalesforceConnection" type="salesforceconnection:SalesforceConnection">
-  <jndi:configuration xsi:type="salesforceconnection:SalesforceConnection" xmi:id="_rlTbgGZaEe2hTuPKX5T_5g"/>
+  <jndi:configuration xsi:type="salesforceconnection:SalesforceConnection" xmi:id="_rlTbgGZaEe2hTuPKX5T_5g" wsdlFilePath="/SalesforceResources/partner_47_0.wsdl">
+    <substitutionBindings xmi:id="_wSqUsGmKEe2Dc5RXWItqlQ" template="serverURL" propName="/Resources/salesforce/SalesforceConnection/ServerURL"/>
+    <substitutionBindings xmi:id="_0BD5EGmKEe2Dc5RXWItqlQ" template="userName" propName="/Resources/salesforce/SalesforceConnection/Username"/>
+    <substitutionBindings xmi:id="_1Ws2UGmKEe2Dc5RXWItqlQ" template="password" propName="/Resources/salesforce/SalesforceConnection/Password"/>
+    <substitutionBindings xmi:id="_5nadkGmKEe2Dc5RXWItqlQ" template="sessionTimeout" propName="/Resources/salesforce/SalesforceConnection/SessionTimeout"/>
+  </jndi:configuration>
 </jndi:namedResource>
