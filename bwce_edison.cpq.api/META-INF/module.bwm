@@ -221,6 +221,15 @@
   <sca:property xmi:id="_RcCrYGdREe288e0gjKmJYQ" name="/Resources/salesforce/SalesforceConnection/Username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_RhGKgGdREe288e0gjKmJYQ" name="/Resources/salesforce/SalesforceConnection/Password" type="property:password" scaext:simpleValue="#!kuRZkqNKsA4StjfQNrnGgw==" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_Rj0uYGdREe288e0gjKmJYQ" name="/Resources/salesforce/SalesforceConnection/SessionTimeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_q_1r8GzGEe2cAJSwkm2-6w" name="/ServiceResourcePath/AddCartItem/ResourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zc1GYGzGEe2cAJSwkm2-6w" name="/ServiceResourcePath/AddPromotion/ResourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_23LGUGzGEe2cAJSwkm2-6w" name="/ServiceResourcePath/CreateCart/ResourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_52ySEGzGEe2cAJSwkm2-6w" name="/ServiceResourcePath/DeleteCartItem/ResourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_9IU7UGzGEe2cAJSwkm2-6w" name="/ServiceResourcePath/DeletePromotion/ResourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_AqxHUGzHEe2cAJSwkm2-6w" name="/ServiceResourcePath/GetCartItem/ResourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_EF-p8GzHEe2cAJSwkm2-6w" name="/ServiceResourcePath/GetCatalog/ResourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_EJ_AMGzHEe2cAJSwkm2-6w" name="/ServiceResourcePath/GetProduct/ResourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_p_ksUGzHEe2cAJSwkm2-6w" name="/ServiceResourcePath/GetProduct/namespace" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="__lezoFxGEe2UgPjM58UbUA" name="ComponentCreateCart" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="__lezoVxGEe2UgPjM58UbUA" processName="bwce_edison.cpq.api.main.CreateCart"/>
     <sca:service xmi:id="_iU5nsGHnEe2N7LEIZPLUJQ" name="CreateCartService">

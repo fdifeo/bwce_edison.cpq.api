@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/AddCartItemInputBody" xmlns:tns="http://www.example.org/AddCartItemInputBody" elementFormDefault="qualified">
+  <element name="Input">     
+    <complexType>            
+      <sequence>               
+        <element minOccurs="1" name="basketAction" type="string"/>      
+		<element minOccurs="1" name="offer" type="string"/>
+		<element minOccurs="0" name="validatebasket" type="string"/> 		
+      </sequence>          
+    </complexType>     
+  </element>
+</schema>

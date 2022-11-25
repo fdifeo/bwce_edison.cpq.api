@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/DeleteCartItemInputBody" xmlns:tns="http://www.example.org/DeleteCartItemInputBody" elementFormDefault="qualified">
+<element name="Input">
+    
+    <complexType>
+      
+      <sequence>
+        
+        <element minOccurs="0" name="basketAction" type="string"/>
+        
+         <element minOccurs="0" name="productConfig" type="string"/>
+         
+      </sequence>
+      
+    </complexType>
+    
+  </element>
+</schema>

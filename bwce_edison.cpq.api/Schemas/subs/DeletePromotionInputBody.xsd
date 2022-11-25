@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/DeletePromotionInputBody" xmlns:tns="http://www.example.org/DeletePromotionInputBody" elementFormDefault="qualified">
+  <element name="Input">
+    
+    <complexType>
+      
+      <sequence>
+        
+        <element minOccurs="0" name="Offer" type="tns:array_Type"/>
+        
+        <element minOccurs="0" name="basketAction" type="string"/>
+        
+      </sequence>
+      
+    </complexType>
+    
+  </element>
+  
+    <complexType name="array_Type">
+    
+    <sequence>
+      
+      <element maxOccurs="unbounded" minOccurs="0" name="productCode" type="string"/>
+      
+    </sequence>
+    
+  </complexType>
+</schema>

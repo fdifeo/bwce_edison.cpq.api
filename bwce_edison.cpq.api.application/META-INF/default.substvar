@@ -478,5 +478,86 @@
 			<isOverride>false</isOverride>
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
+		<globalVariable>
+			<name>//bwce_edison.cpq.api///ServiceResourcePath/AddCartItem/ResourcePath</name>
+			<value>/services/apexrest/vlocity_cmt/v3/catalogs/{catalog_code}/basket?context</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//bwce_edison.cpq.api///ServiceResourcePath/DeleteCartItem/ResourcePath</name>
+			<value>/services/apexrest/vlocity_cmt/v3/catalogs/ /{catalog_code}/basket?context</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//bwce_edison.cpq.api///ServiceResourcePath/GetCatalog/ResourcePath</name>
+			<value>/services/apexrest/vlocity_cmt/catalogs/{catalog_code}/basket/{cart_context_key}?context</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//bwce_edison.cpq.api///ServiceResourcePath/DeletePromotion/ResourcePath</name>
+			<value>/services/apexrest/vlocity_cmt/v3/catalogs/ /{catalog_code}/basket?context</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//bwce_edison.cpq.api///ServiceResourcePath/CreateCart/ResourcePath</name>
+			<value>/services/apexrest/vlocity_cmt/v3/catalogs/{catalogcode}/offers/{productcode}/?context</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//bwce_edison.cpq.api///ServiceResourcePath/GetCartItem/ResourcePath</name>
+			<value>/services/apexrest/vlocity_cmt/v3/catalogs/{catalog_code}/offers?offset&amp;pageSize&amp;sortby&amp;context</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//bwce_edison.cpq.api///ServiceResourcePath/AddPromotion/ResourcePath</name>
+			<value>/services/apexrest/vlocity_cmt/v3/catalogs/{catalog_code}/basket?context</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//bwce_edison.cpq.api///ServiceResourcePath/GetProduct/ResourcePath</name>
+			<value>/services/apexrest/{namespace}/v3/catalogs/{catalog_code}/basket/{cart_context_key}</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
+			<name>//bwce_edison.cpq.api///ServiceResourcePath/GetProduct/namespace</name>
+			<value>TBD</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
 	</globalVariables>
 </repository>

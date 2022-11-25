@@ -5,6 +5,8 @@
   	<complexType>
       
       <sequence>
+      
+      	<element minOccurs="0" name="cart_context_key" type="string"/>									
         
         <element minOccurs="0" name="context" type="tns:context_Type"/>
         
